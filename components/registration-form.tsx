@@ -471,7 +471,7 @@ export function RegistrationForm() {
                 name="place"
                 value={formData.place}
                 onChange={handleInputChange}
-                placeholder="Your city or town"
+                placeholder="Enter your place"
                 readOnly={checkStatus === "found"}
                 className={errors.place ? "border-red-500" : ""}
               />
