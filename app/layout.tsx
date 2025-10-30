@@ -1,28 +1,43 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type { Metadata } from "next";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import "./globals.css";
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
-
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-}
+  title: "Student's Gala",
+  description: `Students’ Gala, a district-level celebration of knowledge,
+            creativity, and innovation! Bringing together thousands of higher
+            secondary students, Students Gala 2025 features inspiring sessions
+            on higher education, entrepreneurship, AI, and emerging
+            technologies, along with vibrant arts competitions and team
+            activities.`,
+  openGraph: {
+    title: "Student's Gala",
+    description: `Students’ Gala, a district-level celebration of knowledge,
+            creativity, and innovation! Bringing together thousands of higher
+            secondary students, Students Gala 2025 features inspiring sessions
+            on higher education, entrepreneurship, AI, and emerging
+            technologies, along with vibrant arts competitions and team
+            activities.`,
+  },
+  keywords: ["gala"],
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
-        {children}
-        <Analytics />
-      </body>
+    <html lang="en" className={poppins.variable}>
+      <body className={`font-poppins antialiased `}>{children}</body>
     </html>
-  )
+  );
 }
