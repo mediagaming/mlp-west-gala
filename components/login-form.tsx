@@ -1,56 +1,58 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { AlertCircle, CheckCircle } from "lucide-react"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { AlertCircle, CheckCircle } from "lucide-react";
 
 interface FormErrors {
-  [key: string]: string
+  [key: string]: string;
 }
 
 export function LoginForm() {
-  const router = useRouter()
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [errors, setErrors] = useState<FormErrors>({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
-  const [errorMessage, setErrorMessage] = useState("")
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const validateForm = (): boolean => {
-    const newErrors: FormErrors = {}
+    const newErrors: FormErrors = {};
 
     if (!email.trim()) {
-      newErrors.email = "Email is required"
+      newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      newErrors.email = "Please enter a valid email address"
+      newErrors.email = "Please enter a valid email address";
     }
 
     if (!password) {
-      newErrors.password = "Password is required"
+      newErrors.password = "Password is required";
     } else if (password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters"
+      newErrors.password = "Password must be at least 6 characters";
     }
 
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!validateForm()) {
-      return
+      return;
     }
 
-    setIsSubmitting(true)
-    setSubmitStatus("idle")
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
 
     try {
       const response = await fetch("/api/auth/login", {
@@ -59,25 +61,29 @@ export function LoginForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, password }),
-      })
+      });
+      const data = await response.json();
 
       if (!response.ok) {
-        const data = await response.json()
-        throw new Error(data.message || "Login failed")
+        throw new Error(data.message || "Login failed");
       }
 
-      setSubmitStatus("success")
+      setSubmitStatus("success");
       // Redirect to admin dashboard
       setTimeout(() => {
-        router.push("/admin")
-      }, 1000)
+        router.push(data.role=== "admin"? "/admin":"/checkin");
+      }, 1000);
     } catch (error) {
-      setSubmitStatus("error")
-      setErrorMessage(error instanceof Error ? error.message : "Login failed. Please try again.")
+      setSubmitStatus("error");
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "Login failed. Please try again."
+      );
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <Card className="p-8 border border-border">
@@ -86,7 +92,9 @@ export function LoginForm() {
           <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
           <div>
             <h3 className="font-semibold text-green-900">Login Successful!</h3>
-            <p className="text-green-800 text-sm mt-1">Redirecting to dashboard...</p>
+            <p className="text-green-800 text-sm mt-1">
+              Redirecting to dashboard...
+            </p>
           </div>
         </div>
       )}
@@ -109,14 +117,16 @@ export function LoginForm() {
             type="email"
             value={email}
             onChange={(e) => {
-              setEmail(e.target.value)
-              if (errors.email) setErrors((prev) => ({ ...prev, email: "" }))
+              setEmail(e.target.value);
+              if (errors.email) setErrors((prev) => ({ ...prev, email: "" }));
             }}
-            placeholder="admin@gala.event"
+            placeholder="Enter email address"
             className={errors.email ? "border-red-500" : ""}
             disabled={isSubmitting}
           />
-          {errors.email && <p className="text-sm text-red-600">{errors.email}</p>}
+          {errors.email && (
+            <p className="text-sm text-red-600">{errors.email}</p>
+          )}
         </div>
 
         <div className="space-y-2">
@@ -126,14 +136,17 @@ export function LoginForm() {
             type="password"
             value={password}
             onChange={(e) => {
-              setPassword(e.target.value)
-              if (errors.password) setErrors((prev) => ({ ...prev, password: "" }))
+              setPassword(e.target.value);
+              if (errors.password)
+                setErrors((prev) => ({ ...prev, password: "" }));
             }}
             placeholder="••••••••"
             className={errors.password ? "border-red-500" : ""}
             disabled={isSubmitting}
           />
-          {errors.password && <p className="text-sm text-red-600">{errors.password}</p>}
+          {errors.password && (
+            <p className="text-sm text-red-600">{errors.password}</p>
+          )}
         </div>
 
         <Button
@@ -145,7 +158,7 @@ export function LoginForm() {
         </Button>
       </form>
 
-      <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+      {/* <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
         <h4 className="font-semibold text-blue-900 mb-2">Demo Credentials</h4>
         <p className="text-sm text-blue-800">
           <strong>Email:</strong> admin@gala.event
@@ -153,7 +166,7 @@ export function LoginForm() {
         <p className="text-sm text-blue-800">
           <strong>Password:</strong> admin123
         </p>
-      </div>
+      </div> */}
     </Card>
-  )
+  );
 }

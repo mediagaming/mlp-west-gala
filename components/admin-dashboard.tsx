@@ -1,33 +1,47 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
-import { Download, Search, Users, CheckCircle, Clock } from "lucide-react"
+import { useEffect, useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import { Download, Search, Users, CheckCircle, Clock } from "lucide-react";
+import { Checkin, Registration } from "@/lib/generated/prisma/client";
 
-interface Attendee {
-  id: string
-  firstName: string
-  lastName: string
-  email: string
-  division: string
-  school: string
-  registeredAt: string
-  checkedIn: boolean
-  checkedInAt?: string
+interface Attendee extends Registration {
+  Checkin: Checkin;
 }
 
 interface Stats {
-  totalRegistrations: number
-  checkedIn: number
-  pending: number
-  divisionBreakdown: Array<{ name: string; value: number }>
-  schoolBreakdown: Array<{ name: string; value: number }>
+  totalRegistrations: number;
+  checkedIn: number;
+  pending: number;
+  divisionBreakdown: Array<{
+    division: string;
+    registerations: number;
+    checkins: number;
+  }>;
 }
 
-const COLORS = ["#dc2626", "#2563eb", "#16a34a", "#ea580c", "#7c3aed", "#0891b2"]
+const COLORS = [
+  "#dc2626",
+  "#2563eb",
+  "#16a34a",
+  "#ea580c",
+  "#7c3aed",
+  "#0891b2",
+];
 
 export function AdminDashboard() {
   const [stats, setStats] = useState<Stats>({
@@ -35,79 +49,81 @@ export function AdminDashboard() {
     checkedIn: 0,
     pending: 0,
     divisionBreakdown: [],
-    schoolBreakdown: [],
-  })
-  const [attendees, setAttendees] = useState<Attendee[]>([])
-  const [filteredAttendees, setFilteredAttendees] = useState<Attendee[]>([])
-  const [searchTerm, setSearchTerm] = useState("")
-  const [loading, setLoading] = useState(true)
+  });
+  const [attendees, setAttendees] = useState<Attendee[]>([]);
+  const [filteredAttendees, setFilteredAttendees] = useState<Attendee[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Fetch dashboard data
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/admin/stats")
+        const response = await fetch("/api/admin/stats");
         if (response.ok) {
-          const data = await response.json()
-          setStats(data.stats)
-          setAttendees(data.attendees)
-          setFilteredAttendees(data.attendees)
+          const data = await response.json();
+          setStats(data.stats);
+          setAttendees(data.attendees);
+          setFilteredAttendees(data.attendees);
         }
       } catch (error) {
-        console.error("Error fetching dashboard data:", error)
+        console.error("Error fetching dashboard data:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const filtered = attendees.filter(
       (attendee) =>
-        attendee.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        attendee.lastName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        attendee.email.toLowerCase().includes(searchTerm.toLowerCase()),
-    )
-    setFilteredAttendees(filtered)
-  }, [searchTerm, attendees])
+        attendee.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        attendee.mobile.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredAttendees(filtered);
+  }, [searchTerm, attendees]);
 
   const handleExportCSV = () => {
     const headers = [
-      "First Name",
-      "Last Name",
-      "Email",
-      "Division",
+      "Name",
+      "Place",
       "School",
+      "Division",
+      "Mobile",
+      "DOB",
       "Registered At",
       "Checked In",
       "Checked In At",
-    ]
+    ];
     const rows = attendees.map((a) => [
-      a.firstName,
-      a.lastName,
-      a.email,
-      a.division,
+      a.name,
+      a.place,
       a.school,
-      new Date(a.registeredAt).toLocaleString(),
-      a.checkedIn ? "Yes" : "No",
-      a.checkedInAt ? new Date(a.checkedInAt).toLocaleString() : "-",
-    ])
+      a.division,
+      a.mobile,
+      a.dob,
+      new Date(a.createdAt).toLocaleString(),
+      a.Checkin ? "Yes" : "No",
+      a.Checkin ? new Date(a.Checkin.createdAt).toLocaleString() : "-",
+    ]);
 
-    const csv = [headers, ...rows].map((row) => row.map((cell) => `"${cell}"`).join(",")).join("\n")
+    const csv = [headers, ...rows]
+      .map((row) => row.map((cell) => `"${cell}"`).join(","))
+      .join("\n");
 
-    const blob = new Blob([csv], { type: "text/csv" })
-    const url = window.URL.createObjectURL(blob)
-    const a = document.createElement("a")
-    a.href = url
-    a.download = `gala-attendees-${new Date().toISOString().split("T")[0]}.csv`
-    a.click()
-  }
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `gala-attendees-${new Date().toISOString().split("T")[0]}.csv`;
+    a.click();
+  };
 
   if (loading) {
     return (
-      <div className="p-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="animate-pulse space-y-4">
           <div className="h-8 bg-muted rounded w-1/4"></div>
           <div className="grid grid-cols-3 gap-4">
@@ -117,15 +133,17 @@ export function AdminDashboard() {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
-    <div className="p-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-2">Admin Dashboard</h1>
-        <p className="text-foreground/70">Event analytics and attendee management</p>
+        <p className="text-foreground/70">
+          Event analytics and attendee management
+        </p>
       </div>
 
       {/* Stats Cards */}
@@ -133,7 +151,9 @@ export function AdminDashboard() {
         <Card className="p-6 border-l-4 border-l-primary">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-foreground/60 mb-1">Total Registrations</p>
+              <p className="text-sm text-foreground/60 mb-1">
+                Total Registrations
+              </p>
               <p className="text-4xl font-bold">{stats.totalRegistrations}</p>
             </div>
             <Users className="w-12 h-12 text-primary/20" />
@@ -144,7 +164,9 @@ export function AdminDashboard() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-foreground/60 mb-1">Checked In</p>
-              <p className="text-4xl font-bold text-green-600">{stats.checkedIn}</p>
+              <p className="text-4xl font-bold text-green-600">
+                {stats.checkedIn}
+              </p>
             </div>
             <CheckCircle className="w-12 h-12 text-green-600/20" />
           </div>
@@ -153,8 +175,12 @@ export function AdminDashboard() {
         <Card className="p-6 border-l-4 border-l-secondary">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-foreground/60 mb-1">Pending Check-in</p>
-              <p className="text-4xl font-bold text-secondary">{stats.pending}</p>
+              <p className="text-sm text-foreground/60 mb-1">
+                Pending Check-in
+              </p>
+              <p className="text-4xl font-bold text-secondary">
+                {stats.pending}
+              </p>
             </div>
             <Clock className="w-12 h-12 text-secondary/20" />
           </div>
@@ -162,43 +188,72 @@ export function AdminDashboard() {
       </div>
 
       {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 gap-6 mb-8">
         {/* Division Breakdown */}
-        <Card className="p-6">
+        {/* <Card className="p-6">
           <h3 className="text-lg font-bold mb-4">Registrations by Division</h3>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={600}>
             <PieChart>
               <Pie
                 data={stats.divisionBreakdown}
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-                label={({ name, value }) => `${name}: ${value}`}
-                outerRadius={80}
+                label={({ division, registerations }) => `${division}: ${registerations}`}
+                outerRadius={150}
                 fill="#8884d8"
-                dataKey="value"
+                dataKey="registerations"
               >
                 {stats.divisionBreakdown.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
                 ))}
               </Pie>
               <Tooltip />
             </PieChart>
           </ResponsiveContainer>
-        </Card>
+        </Card> */}
 
         {/* School Breakdown */}
-        <Card className="p-6">
-          <h3 className="text-lg font-bold mb-4">Registrations by School</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={stats.schoolBreakdown}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" angle={-45} textAnchor="end" height={80} />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="value" fill="#dc2626" />
-            </BarChart>
-          </ResponsiveContainer>
+        <Card className="p-6 ">
+          <h3 className="text-lg font-bold mb-4">Registrations by Divisons</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left py-3 px-4 font-semibold">
+                    Division
+                  </th>
+                  <th className="text-left py-3 px-4 font-semibold">
+                    Regsiterations
+                  </th>
+                  <th className="text-left py-3 px-4 font-semibold">
+                    Checkins
+                  </th>
+                  <th className="text-left py-3 px-4 font-semibold">Pending</th>
+                </tr>
+              </thead>
+              <tbody>
+                {stats.divisionBreakdown.map((div, index) => (
+                  <tr
+                    key={index}
+                    className="border-b border-border hover:bg-muted/50 transition"
+                  >
+                    <td className="py-3 px-4">{div.division}</td>
+                    <td className="py-3 px-4 text-foreground/70">
+                      {div.registerations}
+                    </td>
+                    <td className="py-3 px-4">{div.checkins}</td>
+                    <td className="py-3 px-4">
+                      {div.registerations - div.checkins}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </Card>
       </div>
 
@@ -206,7 +261,10 @@ export function AdminDashboard() {
       <Card className="p-6">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-lg font-bold">Attendee List</h3>
-          <Button onClick={handleExportCSV} className="bg-primary hover:bg-primary/90">
+          <Button
+            onClick={handleExportCSV}
+            className="bg-primary hover:bg-primary/90"
+          >
             <Download className="w-4 h-4 mr-2" />
             Export CSV
           </Button>
@@ -229,33 +287,38 @@ export function AdminDashboard() {
             <thead>
               <tr className="border-b border-border">
                 <th className="text-left py-3 px-4 font-semibold">Name</th>
-                <th className="text-left py-3 px-4 font-semibold">Email</th>
+                <th className="text-left py-3 px-4 font-semibold">Place</th>
                 <th className="text-left py-3 px-4 font-semibold">Division</th>
                 <th className="text-left py-3 px-4 font-semibold">School</th>
+                <th className="text-left py-3 px-4 font-semibold">Mobile</th>
+                <th className="text-left py-3 px-4 font-semibold">DOB</th>
                 <th className="text-left py-3 px-4 font-semibold">Status</th>
-                <th className="text-left py-3 px-4 font-semibold">Registered</th>
               </tr>
             </thead>
             <tbody>
               {filteredAttendees.map((attendee) => (
-                <tr key={attendee.id} className="border-b border-border hover:bg-muted/50 transition">
-                  <td className="py-3 px-4">
-                    {attendee.firstName} {attendee.lastName}
+                <tr
+                  key={attendee.id}
+                  className="border-b border-border hover:bg-muted/50 transition"
+                >
+                  <td className="py-3 px-4">{attendee.name}</td>
+                  <td className="py-3 px-4 text-foreground/70">
+                    {attendee.place}
                   </td>
-                  <td className="py-3 px-4 text-foreground/70">{attendee.email}</td>
                   <td className="py-3 px-4">{attendee.division}</td>
                   <td className="py-3 px-4">{attendee.school}</td>
+                  <td className="py-3 px-4">{attendee.mobile}</td>
+                  <td className="py-3 px-4">{attendee.dob}</td>
                   <td className="py-3 px-4">
                     <span
                       className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                        attendee.checkedIn ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"
+                        attendee.Checkin
+                          ? "bg-green-100 text-green-800"
+                          : "bg-yellow-100 text-yellow-800"
                       }`}
                     >
-                      {attendee.checkedIn ? "Checked In" : "Pending"}
+                      {attendee.Checkin ? "Checked In" : "Pending"}
                     </span>
-                  </td>
-                  <td className="py-3 px-4 text-foreground/70">
-                    {new Date(attendee.registeredAt).toLocaleDateString()}
                   </td>
                 </tr>
               ))}
@@ -274,5 +337,5 @@ export function AdminDashboard() {
         </div>
       </Card>
     </div>
-  )
+  );
 }
