@@ -1,68 +1,79 @@
-import { type NextRequest, NextResponse } from "next/server"
-
-// Mock database for check-ins
-const checkinDatabase: Record<string, { checkedInAt: string }> = {}
-
-// Mock attendee database
-const attendeeDatabase: Record<string, any> = {
-  "GALA-1234567890-ABC123DEF": {
-    firstName: "John",
-    lastName: "Doe",
-    email: "john@example.com",
-    division: "Science",
-    school: "Central School",
-  },
-}
+import { extractNumberFromNPId } from "@/lib/utils";
+import Registeration from "@/models/registeration";
+import { type NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
-    const { ticketId } = body
+    const body = await request.json();
+    const { ticketId } = body;
 
     if (!ticketId) {
-      return NextResponse.json({ success: false, message: "Ticket ID is required" }, { status: 400 })
+      return NextResponse.json(
+        { success: false, message: "Ticket ID is required" },
+        { status: 400 }
+      );
+    }
+    if (!ticketId.startsWith("NP")) {
+      return NextResponse.json(
+        { success: false, message: "Invalid ticket ID" },
+        { status: 400 }
+      );
+    }
+    const id = extractNumberFromNPId(ticketId);
+    if (!id) {
+      return NextResponse.json(
+        { success: false, message: "Invalid ticket ID" },
+        { status: 400 }
+      );
     }
 
-    // Check if ticket exists
-    const attendee = attendeeDatabase[ticketId]
-    if (!attendee) {
-      return NextResponse.json({ success: false, message: "Ticket not found" }, { status: 404 })
+    const registration = await Registeration.getRegistration(id);
+    if (!registration) {
+      return NextResponse.json(
+        { success: false, message: "Ticket not found" },
+        { status: 404 }
+      );
     }
-
-    // Check if already checked in
-    if (checkinDatabase[ticketId]) {
+    if (registration.Checkin) {
       return NextResponse.json(
         {
           success: false,
           message: "Already checked in",
           attendee: {
-            name: `${attendee.firstName} ${attendee.lastName}`,
-            email: attendee.email,
-            division: attendee.division,
-            school: attendee.school,
+            id: registration.id,
+            name: registration.name,
+            division: registration.division,
+            school: registration.school,
+            place: registration.place,
+            mobile: registration.mobile,
+            dob: registration.dob,
           },
         },
-        { status: 409 },
-      )
+        { status: 409 }
+      );
     }
 
-    // Mark as checked in
-    checkinDatabase[ticketId] = {
-      checkedInAt: new Date().toISOString(),
-    }
+    await Registeration.checkIn(id);
+    const attendee = await Registeration.getRegistration(id);
 
     return NextResponse.json({
       success: true,
       message: "Check-in successful",
       attendee: {
-        name: `${attendee.firstName} ${attendee.lastName}`,
-        email: attendee.email,
-        division: attendee.division,
-        school: attendee.school,
+        id: attendee?.id,
+        name: attendee?.name,
+        division: attendee?.division,
+        school: attendee?.school,
+        place: attendee?.place,
+        mobile: attendee?.mobile,
+        dob: attendee?.dob,
       },
-    })
+    });
   } catch (error) {
-    console.error("Check-in error:", error)
-    return NextResponse.json({ success: false, message: "Internal server error" }, { status: 500 })
+    console.error("Check-in error:", error);
+    return NextResponse.json(
+      { success: false, message: "Internal server error" },
+      { status: 500 }
+    );
   }
 }

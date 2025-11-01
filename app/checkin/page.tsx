@@ -1,13 +1,21 @@
-import { QRScanner } from "@/components/qr-scanner"
-import { Card } from "@/components/ui/card"
+import { QRScanner } from "@/components/qr-scanner";
+import { Card } from "@/components/ui/card";
+import Registeration from "@/models/registeration";
+export const dynamic = "force-dynamic";
 
-export default function CheckinPage() {
+export default async function CheckinPage() {
+  const counts = await Registeration.getCount();
+  const registrations = counts?.registerations || 0;
+  const checkins = counts?.checkins || 0;
+
   return (
     <main className="min-h-screen bg-background py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">Event Check-in</h1>
-          <p className="text-foreground/70">Scan QR codes to check in attendees</p>
+          <p className="text-foreground/70">
+            Scan QR codes to check in attendees
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -19,12 +27,18 @@ export default function CheckinPage() {
           {/* Stats */}
           <div className="space-y-4">
             <Card className="p-6">
-              <h3 className="text-sm font-semibold text-foreground/60 mb-2">Total Checked In</h3>
-              <p className="text-4xl font-bold text-primary">0</p>
+              <h3 className="text-sm font-semibold text-foreground/60 mb-2">
+                Total Checked In
+              </h3>
+              <p className="text-4xl font-bold text-primary">{checkins}</p>
             </Card>
             <Card className="p-6">
-              <h3 className="text-sm font-semibold text-foreground/60 mb-2">Pending</h3>
-              <p className="text-4xl font-bold text-secondary">0</p>
+              <h3 className="text-sm font-semibold text-foreground/60 mb-2">
+                Pending
+              </h3>
+              <p className="text-4xl font-bold text-secondary">
+                {registrations - checkins}
+              </p>
             </Card>
             <Card className="p-6 bg-blue-50 border border-blue-200">
               <h3 className="text-sm font-semibold text-blue-900 mb-2">Tips</h3>
@@ -38,5 +52,5 @@ export default function CheckinPage() {
         </div>
       </div>
     </main>
-  )
+  );
 }

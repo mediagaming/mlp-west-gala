@@ -1,4 +1,5 @@
-import { type NextRequest, NextResponse } from "next/server"
+import Registeration from "@/models/registeration";
+import { type NextRequest, NextResponse } from "next/server";
 
 // Mock data - in production, fetch from database
 const mockAttendees = [
@@ -55,27 +56,34 @@ const mockAttendees = [
     checkedIn: true,
     checkedInAt: new Date(Date.now() - 1800000).toISOString(),
   },
-]
+];
 
 export async function GET(request: NextRequest) {
   try {
-    const totalRegistrations = mockAttendees.length
-    const checkedIn = mockAttendees.filter((a) => a.checkedIn).length
-    const pending = totalRegistrations - checkedIn
+    const counts = await Registeration.getCount();
+    const totalRegistrations = counts?.registerations || 0;
+    const checkedIn = counts?.checkins || 0;
+    const pending = totalRegistrations - checkedIn;
 
     // Division breakdown
-    const divisionMap: Record<string, number> = {}
+    const divisionMap: Record<string, number> = {};
     mockAttendees.forEach((a) => {
-      divisionMap[a.division] = (divisionMap[a.division] || 0) + 1
-    })
-    const divisionBreakdown = Object.entries(divisionMap).map(([name, value]) => ({ name, value }))
+      divisionMap[a.division] = (divisionMap[a.division] || 0) + 1;
+    });
+    const divisionBreakdown = await Registeration.getCountByDivisions();
 
     // School breakdown
-    const schoolMap: Record<string, number> = {}
+    const schoolMap: Record<string, number> = {};
     mockAttendees.forEach((a) => {
-      schoolMap[a.school] = (schoolMap[a.school] || 0) + 1
-    })
-    const schoolBreakdown = Object.entries(schoolMap).map(([name, value]) => ({ name, value }))
+      schoolMap[a.school] = (schoolMap[a.school] || 0) + 1;
+    });
+    const schoolBreakdown = Object.entries(schoolMap).map(([name, value]) => ({
+      name,
+      value,
+    }));
+
+    const registerations = await Registeration.getRegisterations();
+    const checkins = await Registeration.getCheckins();
 
     return NextResponse.json({
       stats: {
@@ -83,12 +91,14 @@ export async function GET(request: NextRequest) {
         checkedIn,
         pending,
         divisionBreakdown,
-        schoolBreakdown,
       },
-      attendees: mockAttendees,
-    })
+      attendees: registerations,
+    });
   } catch (error) {
-    console.error("Error fetching stats:", error)
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 })
+    console.error("Error fetching stats:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
   }
 }
