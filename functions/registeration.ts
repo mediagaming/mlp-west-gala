@@ -7,7 +7,8 @@ export async function register(data: {
   mobile: string;
   dob: string;
   division: string;
-  place: string;
+  class: "PLUS_ONE" | "PLUS_TWO";
+  course: "SCIENCE" | "COMMERCE" | "HUMANITIES" | "VHSC";
   school: string;
 }) {
   // TODO: implement registration logic

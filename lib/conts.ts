@@ -1,3912 +1,1802 @@
 export const DIVISIONS = [
-  "Areekod",
-  "Edakkara",
-  "Edavannappara",
-  "Kolathur",
-  "Kondotty",
-  "Malappuram",
-  "Manjeri East",
-  "Manjeri West",
-  "Nilambur",
-  "Perinthalmanna",
-  "Pulikkal",
-  "Wandoor",
+  "Thrissur",
+  "Kodungallur",
+  "Kaipamangalam",
+  "Thriprayar",
+  "Chavakkad",
+  "Vadakkekad",
+  "Kunnamkulam",
+  "Wadakkanchery",
+  "Chelakkara",
 ];
+export const COURSES = ["Commerce", "Science", "Humanities", "VHSC"];
 export const SCHOOLS = [
   {
-    id: "4789",
-    name: "GVHSS Omanur",
+    name: "G. M. R. S. For Boys ThriThala",
   },
   {
-    id: "4790",
-    name: "GHSS Kuzhimanna",
+    name: "GoVt. H. S Kochanoor",
   },
   {
-    id: "4791",
-    name: "G.H.S. Chullikkode",
+    name: "GovT. H. S ManaThala",
   },
   {
-    id: "4792",
-    name: "GovT High SChool MuThuvallur",
+    name: "GoVt. R. F. T. H. S ChaVakkad",
   },
   {
-    id: "4793",
-    name: "GLPS Kizhisseri",
+    name: "GovT. H. S Kadikkad",
   },
   {
-    id: "4794",
-    name: "GLPS Kuzhimanna",
+    name: "G. F. U. P. S Blangad",
   },
   {
-    id: "4795",
-    name: "GLPS Kuzhimanna II South",
+    name: "G. U. P. S Cherai",
   },
   {
-    id: "4796",
-    name: "GLPS Parappur",
+    name: "G. U. P. S GuruVayur",
   },
   {
-    id: "4797",
-    name: "GLPS Parapurathparamba",
+    name: "G. F. U. P. S Kadappuram",
   },
   {
-    id: "4798",
-    name: "GLPS ParaThakkad",
+    name: "G. F. U. P. S Mannalamkunnu",
   },
   {
-    id: "4799",
-    name: "GLPS Ponnad",
+    name: "G. F. U. P. S PuThenkadappuram",
   },
   {
-    id: "4800",
-    name: "GMLPS PookalaThur",
+    name: "St. Theresa's Girls H. S\nBrahmakulam",
   },
   {
-    id: "4801",
-    name: "GLPS Pulpatta",
+    name: "V. R. A. M. H. S Thaikkad SouTh",
   },
   {
-    id: "4802",
-    name: "GMLPS Thavanur",
+    name: "M. R. R. M. H. S Chavakkad",
   },
   {
-    id: "4803",
-    name: "GLPS Valamangalam",
+    name: "ST. George`s H. S Thozhiyur",
   },
   {
-    id: "4804",
-    name: "GLPS Vilayil",
+    name: "H. S. ThiruValayannur",
   },
   {
-    id: "4805",
-    name: "GLPS Vilayil Parappur",
+    name: "St. Sebastian`s H. S Chittattukara",
   },
   {
-    id: "4806",
-    name: "GUPS CheaCode",
+    name: "A. M. U. P. S Akalad",
   },
   {
-    id: "4807",
-    name: "GUPS Kadungallur",
+    name: "A. M. U. P. S Aviyur",
   },
   {
-    id: "4808",
-    name: "GMUPS Kizhisseri",
+    name: "R. P. M. M. U. P. S Edakkazhiyur",
   },
   {
-    id: "4809",
-    name: "MGLC Melmuri",
+    name: "A. U. P. S Guruvayur",
   },
   {
-    id: "4810",
-    name: "KKMHS Cheekode",
+    name: "R. C. U. P. S Kottapadi",
   },
   {
-    id: "4811",
-    name: "CHMHS Pookolathur",
+    name: "L. F. C. U. P. S Mammiyur",
   },
   {
-    id: "4812",
-    name: "AMLPS CherupuThur",
+    name: "A. U. P. S Orumanayur",
   },
   {
-    id: "4813",
-    name: "PMSAPTMALPS Chirappalam",
+    name: "A. U. P. S Palayur",
   },
   {
-    id: "4814",
-    name: "AMLPS Cholayilmukku",
+    name: "St. Antony`s U. P. S PooVathoor",
   },
   {
-    id: "4815",
-    name: "AMLPS Mundakkulam",
+    name: "A. U. P. S Perakam",
   },
   {
-    id: "4816",
-    name: "ALPS Mundamparamba",
+    name: "St. Antony`s C. U. P. S PaluVai",
   },
   {
-    id: "4817",
-    name: "AMLPS Muthanoor",
+    name: "R. R. M. U. P. S Punnayurkulam",
   },
   {
-    id: "4818",
-    name: "PMSALPS MuThuparamba",
+    name: "K. A. U. P. S ThiruVathra",
   },
   {
-    id: "4819",
-    name: "AMLPS Olamathil",
+    name: "C. M. U. P. S Thozhiyur",
   },
   {
-    id: "4820",
-    name: "AMLPS Omanur",
+    name: "P. K. M. H. M. U. P. S Vattekkad",
   },
   {
-    id: "4821",
-    name: "AMLPS Palakkad",
+    name: "A. U. P. S Vazhappilly",
   },
   {
-    id: "4822",
-    name: "PMSAPTMLPS Palakkad NorTh",
+    name: "St. Francis U. P. S Vylathur",
   },
   {
-    id: "4823",
-    name: "AMLPS Panat",
+    name: "GoVt. H. S Thayyoor",
   },
   {
-    id: "4824",
-    name: "AMLPS Thavanur SouTh",
+    name: "GoVt. H. S Marathencode",
   },
   {
-    id: "4825",
-    name: "AMLPS VaVoor",
+    name: "G. L. .P. S Kadangode",
   },
   {
-    id: "4826",
-    name: "CBMSYLPS Vilayil Parappur",
+    name: "G. U. P. S Choondal",
   },
   {
-    id: "4827",
-    name: "AMLPS Karaparamba",
+    name: "G. U. P. S KoraTTikara",
   },
   {
-    id: "4828",
-    name: "AUPS Mundakkal",
+    name: "G. U. P. S Puduruthy",
   },
   {
-    id: "4829",
-    name: "AUPS Puliyacode",
+    name: "G. U. P. S VaduThala",
   },
   {
-    id: "4830",
-    name: "AUPS ThoTTekkad",
+    name: "GoVt. School for Blind\nKunnamkulam",
   },
   {
-    id: "4831",
-    name: "AUPS Thripanachi",
+    name: "M. J. D. H. S Kunnamkulam",
   },
   {
-    id: "4832",
-    name: "GanapaTh AUPS Kizhisseri",
+    name: "B. C. G. H. S Kunnamkulam",
   },
   {
-    id: "4833",
-    name: "CHMKMUPS Mundakkulam",
+    name: "L. I. G. H. S Choondal",
   },
   {
-    id: "4834",
-    name: "Al Ansar UPS Mundamparamba",
+    name: "A. M. H. S Chemmanur",
   },
   {
-    id: "4835",
-    name: "PMSA MAUPS Olamathil",
+    name: "ST. FranCis H. S for Girls MaTTom",
   },
   {
-    id: "4836",
-    name: "UAHMUPS Omanur",
+    name: "SarVodayam H. S Aryampadam",
   },
   {
-    id: "4837",
-    name: "MUPS ThaVanur",
+    name: "ST. Joseph`s And ST. Cyril`s H. S\nWesT Mangad",
   },
   {
-    id: "4838",
-    name: "MHMAUPS Vavoor",
+    name: "H. S PengamuCk",
   },
   {
-    id: "4839",
-    name: "VPAUPS Vilayil Parappur",
+    name: "St. Mary`s G. H. S Chowannur",
   },
   {
-    id: "4840",
-    name: "G.M.U.P.S. Arimbra",
+    name: "Al Ameen H.S KeCheri",
   },
   {
-    id: "4841",
-    name: "G.U.P.S. Chaliyappuram",
+    name: "V. S Kizhoor",
   },
   {
-    id: "4842",
-    name: "G.M.U.P.S. Chirayil",
+    name: "R. S. S. R. V. M. G. S Kunnamkulam",
   },
   {
-    id: "4843",
-    name: "G.M.U.P.S. Ozhukur",
+    name: "M.T.S Pazhanji",
   },
   {
-    id: "4844",
-    name: "G.M.U.P.S. Vazhakkad",
+    name: "MUMLPS PERMPILAVU",
   },
   {
-    id: "4845",
-    name: "G.M.U.P.S. Kondotty",
+    name: "H. C. C.G. U. P. S Cherlayam",
   },
   {
-    id: "4846",
-    name: "G.U.P.S. Neerad",
+    name: "S. M. U. P. S Iringappuram",
   },
   {
-    id: "4847",
-    name: "H.I.O.H.S. OlavaTTur",
+    name: "M.S.S.U. P. S Kandanissery",
   },
   {
-    id: "4848",
-    name: "R.H.S. Ramanattukara",
+    name: "St. M. M. C. U. P. S Kanipayyur",
   },
   {
-    id: "4849",
-    name: "A.M.M. H.S. Pulikkal",
+    name: "Gnanaprakasini. U. P. S. KeCherry",
   },
   {
-    id: "4850",
-    name: "E.M.E.A.H.S. Kondotty",
+    name: "St. Thomas U. P. S Koonamoochy",
   },
   {
-    id: "4851",
-    name: "CRESCENT H.S. Ozhukur",
+    name: "M. P. M. U. P. S MaraThenCode",
   },
   {
-    id: "4852",
-    name: "A.M.L.P.B.S. Muttayur",
+    name: "St. Thomas U. P. S Parannur",
   },
   {
-    id: "4853",
-    name: "A.L.P.B.S Parammal Azhinhilam",
+    name: "L. M. U. P.S Perumpilavu",
   },
   {
-    id: "4854",
-    name: "A.M.U.P.S. Akkode Virippadam",
+    name: "M. K. M. U. P. S Porkulam",
   },
   {
-    id: "4855",
-    name: "A.M.U.P.S. Aroor",
+    name: "ST. Thomas U. P. S Puliyannoor",
   },
   {
-    id: "4856",
-    name: "A.U.P.S. Azhinhilam",
+    name: "V. S. U. P. S Vellarakad",
   },
   {
-    id: "4857",
-    name: "A.K.H.M.U.P.S.\nKANNAMVETTYKAVE",
+    name: "ST. Xaviers U. P. S Velur",
   },
   {
-    id: "4858",
-    name: "P.T.M.A.M.U.P.S. Cherumittam",
+    name: "Snehalayam C. S. I. H.S. for Deaf\nKunnamkulam",
   },
   {
-    id: "4859",
-    name: "M.I.A.M.U.P.S. CheruvaTTur",
+    name: "GoVt. H. S ElaVally",
   },
   {
-    id: "4860",
-    name: "Mina A.M.U.P.S. CheruVayur",
+    name: "G. M. U. P. S Kundazhiyoor",
   },
   {
-    id: "4861",
-    name: "A.M.U.P.S. Mongam",
+    name: "G. U. P. S PavaraTTY",
   },
   {
-    id: "4862",
-    name: "A.M.U.P.S. Pallikkal",
+    name: "G. U. P. S PeruValloor",
   },
   {
-    id: "4863",
-    name: "B.T.M. A.M.U.P.S. Pengad",
+    name: "C. K. C. Girls H. S PavaraTTy",
   },
   {
-    id: "4864",
-    name: "A.U.P.S. PeringaVu",
+    name: "St. Joseph`s H. S Enamakkal",
   },
   {
-    id: "4865",
-    name: "A.M.U.P.S. PuThur Pallikkal",
+    name: "Hindu U. P. S Mullasserry",
   },
   {
-    id: "4866",
-    name: "A.U.P.B.S. Vennayur",
+    name: "A. U. P. S Oorakam",
   },
   {
-    id: "4867",
-    name: "B.T.M. O.U.P.S. Elamaram",
+    name: "V. V. U. P. S Padur",
   },
   {
-    id: "4868",
-    name: "Padma A.U.P.S. Karad",
+    name: "R. C. U. P. S ThoyakaVu",
   },
   {
-    id: "4869",
-    name: "A.M.U.P.S. Kozhippuram",
+    name: "M. U. P. S Vaka",
   },
   {
-    id: "4870",
-    name: "A.M.U.P.S. Kumminipparamba",
+    name: "CKCTTI PAVARATTY",
   },
   {
-    id: "4871",
-    name: "A.U.P.S Devadar Nediyiruppu",
+    name: "G. M. U. P. S ChettuVai",
   },
   {
-    id: "4872",
-    name: "I.A.U.P.S. Valiyaparamba",
+    name: "G. F. U. P. S KoTTakadappuram",
   },
   {
-    id: "4873",
-    name: "C.H.M. K.M.U.P.S. (AIP)Vazhakkad",
+    name: "G.U. P. S Peringanam",
   },
   {
-    id: "4874",
-    name: "KARUNYABHAVAN SCHOOL FOR\nTHE DEAF, VAZHAKKAD",
+    name: "G.F. U. P. S Vadanappally",
   },
   {
-    id: "4875",
-    name: "GHSS POOKKOTTUR",
+    name: "ST. Thomas H. S Engandiyur",
   },
   {
-    id: "4876",
-    name: "G.B.H.S. Malappuram",
+    name: "H. S Chentrappinni",
   },
   {
-    id: "4877",
-    name: "G.H.S. Irumbuzhi",
+    name: "ST. Anne`s Girls H. S\nEdaThuruThy",
   },
   {
-    id: "4878",
-    name: "G.R.H.S. Kottakkal",
+    name: "P.M.M.U. P. S Chandrappinni",
   },
   {
-    id: "4879",
-    name: "G.M.U.P.S. ChemmankadaVu",
+    name: "S. V. U. P. S EdamuTTom",
   },
   {
-    id: "4880",
-    name: "G.M.U.P.S. Irumbuzhi",
+    name: "U. P. S Edamuttom",
   },
   {
-    id: "4881",
-    name: "G.M.U.P.S. Kottakkal",
+    name: "R. C. U. P. S EdaThuriThi",
   },
   {
-    id: "4882",
-    name: "G.M.U.P.S. Melmuri",
+    name: "St. Aney`s C. U. P. S Edathurithi",
   },
   {
-    id: "4883",
-    name: "G.U.P.S. Kottakkal",
+    name: "M.I.C.O. U. P. S Kaipamangalam",
   },
   {
-    id: "4884",
-    name: "G.U.P.S. MuThiriparamba",
+    name: "K. A. M. U. P. S Kaipamangalam",
   },
   {
-    id: "4885",
-    name: "G.U.P.S. Ponmala",
+    name: "R. C. U. P. S Kaipamangalam",
   },
   {
-    id: "4886",
-    name: "P.M.S.A.V.H.S. Chapanangadi",
+    name: "U. P. S Karayamuttom",
   },
   {
-    id: "4887",
-    name: "D.U.H.S. Panakkad",
+    name: "S. N. U. P. S Kundazhiyoor",
   },
   {
-    id: "4888",
-    name: "M.M.E.T.H.S Melmuri",
+    name: "U. P. S Nattika Central",
   },
   {
-    id: "4889",
-    name: "A.M.U.P.S. Kodur WesT",
+    name: "U. P. S NaTTika EasT",
   },
   {
-    id: "4890",
-    name: "A.M.U.P.S. Kooriyad",
+    name: "K. M. U. P. S Nattika West",
   },
   {
-    id: "4891",
-    name: "A.M.U.P.S. MangaTTupulam",
+    name: "V. V. U. P. S Pallipram",
   },
   {
-    id: "4892",
-    name: "A.M.U.P.S. Munduparamba",
+    name: "U. P. S Peringanam East",
   },
   {
-    id: "4893",
-    name: "A.M.U.P.S. UmmaThur",
+    name: "S. N. S. U. P. S Peringanam",
   },
   {
-    id: "4894",
-    name: "A.M.U.P.S. ValluVambrum",
+    name: "East.U. P. S Perumpadappa",
   },
   {
-    id: "4895",
-    name: "A.U.P.S. Malappuram",
+    name: "S. R. V. U. P. S Perumpadappa",
   },
   {
-    id: "4896",
-    name: "A.U.P.S. Mannazhi",
+    name: "A. M. U. P. S Thalikulam",
   },
   {
-    id: "4897",
-    name: "P.K.M.U.P.S. AlpaTTukulamba",
+    name: "C. M. S. U. P. S Thalikulam",
   },
   {
-    id: "4898",
-    name: "A.U.P.S. Pookottur",
+    name: "S. N. V. U. P. S Thalikulam",
   },
   {
-    id: "4899",
-    name: "B.M.M.U.P.S. Chappanangadi",
+    name: "Thirumangalam.U.P.S",
   },
   {
-    id: "4900",
-    name: "C.A.U.P.S. Perimbalam",
+    name: "S. V. U. P. S Thriprayar",
   },
   {
-    id: "4901",
-    name: "M.U.A.U.P.S. Panakkad",
+    name: "U. P. S Thriprayar",
   },
   {
-    id: "4902",
-    name: "TECHNICAL HS MANJERI",
+    name: "U. P. S Thrithalloor",
   },
   {
-    id: "4903",
-    name: "G.U.P.S. Anakkayam",
+    name: "SouTh Mapla U. P. S\nVadanappilly",
   },
   {
-    id: "4904",
-    name: "G.U.P.S. Elankur",
+    name: "St. Francis XaVier's R.C.U.P School,\nVatanappally",
   },
   {
-    id: "4905",
-    name: "G.U.P.S. Puloor",
+    name: "GoVt. H. S Panjal",
   },
   {
-    id: "4906",
-    name: "G.U.P.S. Manjeri",
+    name: "GovT. H. S Pampady",
   },
   {
-    id: "4907",
-    name: "G.M.U.P.S. Melakkam",
+    name: "GovT. Girls H. S WadakkanChery",
   },
   {
-    id: "4908",
-    name: "G.U.P.S. Pathappiriyam",
+    name: "GMRS FOR BOYS THIRUVILWAMALA",
   },
   {
-    id: "4909",
-    name: "G.U.P.S. Veembur",
+    name: "G. U. P. S ATToor",
   },
   {
-    id: "4910",
-    name: "P.T.A.U.P.S. Pandallur",
+    name: "G. U. P. S Killimangalam",
   },
   {
-    id: "4911",
-    name: "G.M.U.P.S. VeTTikaTTiri",
+    name: "G. U. P. S KuThampully",
   },
   {
-    id: "4912",
-    name: "GLPS ANAKKOTTUPURAM",
+    name: "G. U. P. S Mayannur",
   },
   {
-    id: "4913",
-    name: "GMLP SChool ANAKKAYAM",
+    name: "G. U. P. S Parlikkad",
   },
   {
-    id: "4914",
-    name: "P.M.S.A.H.S. Elankur",
+    name: "G. U. P. S Pynkulam",
   },
   {
-    id: "4915",
-    name: "I.O.H.S. EdaVanna",
+    name: "G. U. P. S Thrikkanaya",
   },
   {
-    id: "4916",
-    name: "A.U.P.S. Chembrasseri estate",
+    name: "M G L C Thirumani",
   },
   {
-    id: "4917",
-    name: "A.U.P.S. Chembrasseri",
+    name: "ST. Joseph`s H. S Pangarappilly",
   },
   {
-    id: "4918",
-    name: "A.U.P.S. Karakunnu",
+    name: "L. F. Girls H. S Chelakkara",
   },
   {
-    id: "4919",
-    name: "A.M.U.P.S. Mullampara",
+    name: "N. S. S. H. S Mulloorkara",
   },
   {
-    id: "4920",
-    name: "A.U.P.S. Patterkulam",
+    name: "St. Thomas H. S Mayannoor",
   },
   {
-    id: "4921",
-    name: "M.U.P.S. Thrikkalangode",
+    name: "Nirmala H. S Kundukad",
   },
   {
-    id: "4922",
-    name: "H.M.S.A.U.P.S. Thurakkal",
+    name: "ST. John`s H. S Elanad",
   },
   {
-    id: "4923",
-    name: "A.M.U.P.S. Vadakkangara",
+    name: "C. G. E. M. S Chelakkara",
   },
   {
-    id: "4924",
-    name: "A.M.U.P.S. Kunduthode",
+    name: "B. M. P. V Kanjirakode",
   },
   {
-    id: "4925",
-    name: "H.I.M.U.P.S. ManhapaTTa",
+    name: "J. V Machad",
   },
   {
-    id: "4926",
-    name: "H.S.A.U.P.S. Pappinippara",
+    name: "M. N. D. S PanangaTTukara",
   },
   {
-    id: "4927",
-    name: "ALPS Amayur",
+    name: "A. U. P. S Ambalapad",
   },
   {
-    id: "4928",
-    name: "G U P S KooTTilangadi",
+    name: "Gnanodayam. U. P. S ChiTTanda",
   },
   {
-    id: "4929",
-    name: "G M U P S Mankada",
+    name: "S. V. U. P. S . Kondazhy",
   },
   {
-    id: "4930",
-    name: "G U P S Mankada Pallippuram",
+    name: "ST. Joseph U. P. S Kundannur",
   },
   {
-    id: "4931",
-    name: "GoVt. U P School Pang",
+    name: "A. S. M. N. S. S. U. P. S Mullurkara",
   },
   {
-    id: "4932",
-    name: "G U P S Panagangara",
+    name: "A. U. P. S Pallikkal",
   },
   {
-    id: "4933",
-    name: "M P A U P S Vadakkangara",
+    name: "A. D. V. U. P. S Peringandur",
   },
   {
-    id: "4934",
-    name: "T H S Angadippuram",
+    name: "ST.Joseph's U. P. S Pangarappilly",
   },
   {
-    id: "4935",
-    name: "A M H S Thirurkkad",
+    name: "A.N.M.M. U. P. S Thichur Thali",
   },
   {
-    id: "4936",
-    name: "N H S KolaThur",
+    name: "A. U. P. S Thonoorkara",
   },
   {
-    id: "4937",
-    name: "T S S Vadakkangara",
+    name: "St. Pius X. U. P. S Wadakkanchery",
   },
   {
-    id: "4938",
-    name: "A M U P S Koottil",
+    name: "S. N. T. T. I. U. P. S CheruThuruThy",
   },
   {
-    id: "4939",
-    name: "M M S U P S Kozhinhil",
+    name: "SNTTI CHRUTHURUTHY",
   },
   {
-    id: "4940",
-    name: "A U P S KuruVa",
+    name: "G H S VIJAYARAGHAVAPURAM",
   },
   {
-    id: "4941",
-    name: "A E M A U P S Moorkanad",
+    name: "G G H S CHALAKUDY",
   },
   {
-    id: "4942",
-    name: "F U P S Pariyapuram",
+    name: "G N B H S KODAKARA",
   },
   {
-    id: "4943",
-    name: "V M H M U P S Punarppa",
+    name: "M R S CHALAKUDY",
   },
   {
-    id: "4944",
-    name: "M A M U P S Vellila",
+    name: "G T S RANDUKAI",
   },
   {
-    id: "4945",
-    name: "A M U P S Vengad",
+    name: "G U P S MALAKKAPPARA",
   },
   {
-    id: "4946",
-    name: "K S K M U P S Cherukulamba",
+    name: "G U P S CHAIPANKUZHY",
   },
   {
-    id: "4947",
-    name: "A U P S Kadannamanna",
+    name: "G U P S NAYARANGADY",
   },
   {
-    id: "4948",
-    name: "O U P S Padinhattummuri",
+    name: "G U P S VELLIKKULANGARA",
   },
   {
-    id: "4949",
-    name: "O A U P S Poopalam Valambur",
+    name: "G U P S LOURDUPURAM",
   },
   {
-    id: "4950",
-    name: "P T M U P S Puthanangadi",
+    name: "G U P S NANDIPULAM",
   },
   {
-    id: "4951",
-    name: "K S B VallikkapaTTa",
+    name: "ST. ANTONY`S C G H S KOTTAT",
   },
   {
-    id: "4952",
-    name: "G H S Aliparamba",
+    name: "ST. JOSEPH`S H S MELOOR",
   },
   {
-    id: "4953",
-    name: "GLPS Arakkuparamba",
+    name: "DONBOSCO G H S KODAKARA",
   },
   {
-    id: "4954",
-    name: "GMLPS KakkooTh",
+    name: "S K H S MATTATHUR",
   },
   {
-    id: "4955",
-    name: "GLPS KunnakkaVu",
+    name: "P C G H S VELLIKULANGARA",
   },
   {
-    id: "4956",
-    name: "GLPS Kappumugham",
+    name: "M A M H S KORATTY",
   },
   {
-    id: "4957",
-    name: "GMLPS Muthiramanna",
+    name: "ST. GEORGE`S H S PARIYARAM",
   },
   {
-    id: "4958",
-    name: "GLPS Pallikunnu",
+    name: "ST. ANTONY`S C U P S ELINJIPRA",
   },
   {
-    id: "4959",
-    name: "GLPS Parakkalmukku",
+    name: "S N U P S KUNDUKUZHIPADAM",
   },
   {
-    id: "4960",
-    name: "GMLPS PerinThalmanna CenTral",
+    name: "K E C U P S POTTA",
   },
   {
-    id: "4961",
-    name: "GLPS Perinthalmanna East",
+    name: "ST.GEORGE U P S VELOOKARA",
   },
   {
-    id: "4962",
-    name: "GLPS PerinThalmanna WesT",
+    name: "S N U P S KUNNAPPILLY",
   },
   {
-    id: "4963",
-    name: "GMLPS Puthur",
+    name: "V B U P S POOLANY",
   },
   {
-    id: "4964",
-    name: "GMLPS Thazhekode",
+    name: "ST. JOHN`S C U P S MELOOR",
   },
   {
-    id: "4965",
-    name: "GMLPS Thootha",
+    name: "R U P S MELOOR",
   },
   {
-    id: "4966",
-    name: "GMUPS Valapuram",
+    name: "N U P S KORATTY",
   },
   {
-    id: "4967",
-    name: "ALPS Aliparamba",
+    name: "M S U P S KORATTY",
   },
   {
-    id: "4968",
-    name: "SMAMLPS Aliparamba",
+    name: "K V U P S MANAKULANGARA",
   },
   {
-    id: "4969",
-    name: "AMLPS Amminikkad",
+    name: "ST. ANTONY`S U P S PERAMBRA",
   },
   {
-    id: "4970",
-    name: "ALPS Anamangad",
+    name: "S N V U P S MOOLAMKUDAM",
   },
   {
-    id: "4971",
-    name: "ALPS Cheerattamala",
+    name: "A U P S THESSERY",
   },
   {
-    id: "4972",
-    name: "ALPS CheeraTTamanna",
+    name: "ST. JOSEPH`S U P S MATTATHUR",
   },
   {
-    id: "4973",
-    name: "YMLPS Chemmala",
+    name: "G U P S VELLANGALLUR",
   },
   {
-    id: "4974",
-    name: "AMLPS Cherukara",
+    name: "G U P S VADAKKUMKARA",
   },
   {
-    id: "4975",
-    name: "AMLPS Edakkal",
+    name: "G U P S ANANDAPURAM",
   },
   {
-    id: "4976",
-    name: "AMLPS EdaThara",
+    name: "G U P S KADUPPASSERY",
   },
   {
-    id: "4977",
-    name: "ALPS Elamkulam",
+    name: "S P K C M M G U P S MADAIKONAM",
   },
   {
-    id: "4978",
-    name: "ALPS Elamkulam SouTh",
+    name: "GoVt.TTI Chalakudy",
   },
   {
-    id: "4979",
-    name: "ALPS EraVimangalam",
+    name: "B V M H S KALLETTUMKARA",
   },
   {
-    id: "4980",
-    name: "AMLPS Kunnappalli",
+    name: "L F C H S IRINJALAKUDA",
   },
   {
-    id: "4981",
-    name: "AMLPS KuruVambalam",
+    name: "B V M H S KALPARAMBA",
   },
   {
-    id: "4982",
-    name: "ALPS Manalaya",
+    name: "ST. XAVIER`S H S KARANCHIRA",
   },
   {
-    id: "4983",
-    name: "AMLPS ManaThumangalam",
+    name: "H C H S MAPRANAM",
   },
   {
-    id: "4984",
-    name: "ALPS Palathole",
+    name: "ST. ANTONY`S H S MOORKANAD",
   },
   {
-    id: "4985",
-    name: "ALPS Palur",
+    name: "ST. JOSEPH`S H S KARUVANNUR",
   },
   {
-    id: "4986",
-    name: "AMLPS Palur",
+    name: "P V S H S PARAPPUKKARA",
   },
   {
-    id: "4987",
-    name: "ALPS Pariyapuram",
+    name: "ST.MARY`S H S CHENGALOOR",
   },
   {
-    id: "4988",
-    name: "AMLPS Ponniakurissi North",
+    name: "D B E P S PADIYOOR",
   },
   {
-    id: "4989",
-    name: "AMLPS Ponniakurissi SouTh",
+    name: "S N G S U P S KAKKATHURUTHY",
   },
   {
-    id: "4990",
-    name: "MMLPS Puthur East",
+    name: "ST. GEORGE`S C U P S KARANCHIRA",
   },
   {
-    id: "4991",
-    name: "AMLPS Thirunarayanapuram",
+    name: "J U P S PANTHALLUR",
   },
   {
-    id: "4992",
-    name: "ALPS Valamkulam",
+    name: "A U P S PARAPPUKKARA",
   },
   {
-    id: "4993",
-    name: "AMLPS Vazhenkada SouTh",
+    name: "K S U P S THOTTIPPAL",
   },
   {
-    id: "4994",
-    name: "AMLPS Veettikkad",
+    name: "M K M U P S NENMANIKKARA",
   },
   {
-    id: "4995",
-    name: "AMLPS Kambram",
+    name: "S N G S S U P S EDAKULAM",
   },
   {
-    id: "4996",
-    name: "AUPS Arakkuparamba",
+    name: "S S A I U P S PADIYOOR",
   },
   {
-    id: "4997",
-    name: "AMUPS Chelakkad",
+    name: "A U P S MURIYAD",
   },
   {
-    id: "4998",
-    name: "AUPS Chemmala",
+    name: "L C U P S IRINJALAKUDA",
   },
   {
-    id: "4999",
-    name: "AUPS Cherukara",
+    name: "M U P S PORATHISSERY",
   },
   {
-    id: "5000",
-    name: "AMUPS EraVimangalam",
+    name: "ST. XAVIER`S C U P S PUTHUKKAD",
   },
   {
-    id: "5001",
-    name: "AMUPS Kunnappalli",
+    name: "SNTTI Irinjalakuda",
   },
   {
-    id: "5002",
-    name: "VRUPS Muthukurissi",
+    name: "LCTTI Irinjalakuda",
   },
   {
-    id: "5003",
-    name: "AUPS PaThaikkara",
+    name: "KTTI Panangad",
   },
   {
-    id: "5004",
-    name: "KMMUPS Perinthalmanna South",
+    name: "SSMTTI Azhikode",
   },
   {
-    id: "5005",
-    name: "AMUPS PoovaThani",
+    name: "G H S PULLUT",
   },
   {
-    id: "5006",
-    name: "AUPS Pulamanthole",
+    name: "MARMGVHSS SANTHIPURAM",
   },
   {
-    id: "5007",
-    name: "KNMAMUPS Vazhenkada NorTh",
+    name: "G U P S ANAPPUZHA",
   },
   {
-    id: "5008",
-    name: "PTMUPS Amminikkadu",
+    name: "G U P S METHALA",
   },
   {
-    id: "5009",
-    name: "AUPS Anamangad",
+    name: "G U P S AZHIKODE",
   },
   {
-    id: "5010",
-    name: "AUPS Palathole",
+    name: "G U P S KARUMATHRA",
   },
   {
-    id: "5011",
-    name: "SMUPS PerinThalmanna",
+    name: "G U P S KONATHUKUNNU",
   },
   {
-    id: "5012",
-    name: "VPAMUPS Puthur",
+    name: "G U P S VALLIVATTAM",
   },
   {
-    id: "5013",
-    name: "Assisi sChool for The Deaf,\nmalaparambu",
+    name: "TECHNICAL HS KODUNGALLUR",
   },
   {
-    id: "5014",
-    name: "G. U. P. S. Ariyallur",
+    name: "ST. ANNE`S H S KOTTAPURAM",
   },
   {
-    id: "5015",
-    name: "G. M. U. P. S. Kakkad",
+    name: "S S M H S AZHICODE",
   },
   {
-    id: "5016",
-    name: "G. U. P. S. Moonniyur",
+    name: "ST. JOSEPH`S H S MATHILAKAM",
   },
   {
-    id: "5017",
-    name: "G. U. P. S. NeduVa",
+    name: "O L F G H S MATHILAKAM",
   },
   {
-    id: "5018",
-    name: "G. M. U. P. S. Parakkadavu",
+    name: "K P M U P S T.K.S. PURAM",
   },
   {
-    id: "5019",
-    name: "G. W. U. P. S. Trikkulam",
+    name: "V D U P S PALIYAMTHURUTHU",
   },
   {
-    id: "5020",
-    name: "G. U. P. S. Trikkulam",
+    name: "S N V U P S ELTHURUTH",
   },
   {
-    id: "5021",
-    name: "G. M. U. P. S. Venniyur",
+    name: "U P S PULLUT",
   },
   {
-    id: "5022",
-    name: "MGLC AVIYIL BEACH",
+    name: "I M U P S AZHIKODE",
   },
   {
-    id: "5023",
-    name: "MGLC THALAPARA",
+    name: "A M I U P S ERIYAD",
   },
   {
-    id: "5024",
-    name: "SCHOOL FOR THE DEAF\nPARAPPANANGADI",
+    name: "H U P S POILINGAPARAMBU",
   },
   {
-    id: "5025",
-    name: "B. E. M. H. S. Parappanangadi",
+    name: "V V U P S KOTHAPARAMBU",
   },
   {
-    id: "5026",
-    name: "M. H. S. Moonniyur",
+    name: "U P S EMMAD",
   },
   {
-    id: "5027",
-    name: "D. V. A. U. P. S. Ariyallur",
+    name: "U P S KALARIPARAMBU",
   },
   {
-    id: "5028",
-    name: "S. V. A. U. P. S. Chelembra",
+    name: "U P S ALA",
   },
   {
-    id: "5029",
-    name: "A. M. M. A. M. U. P. S. Chelupadam",
+    name: "A M U P S PAPPINIVATTAM",
   },
   {
-    id: "5030",
-    name: "A. U. P. S. Chiramangalam",
+    name: "A M U P S KOOLIMUTTAM",
   },
   {
-    id: "5031",
-    name: "A. M. U. P. S. Kadalundinagaram",
+    name: "B B U P S METHALA",
   },
   {
-    id: "5032",
-    name: "A. U. P. S. Kodakkad",
+    name: "M E S FATHIMA REHMAN U P\nSCHOOL VEKKODE",
   },
   {
-    id: "5033",
-    name: "A..M. U. P. S. KunnaThuparamba",
+    name: "S N K U P S P. VEMBALLUR",
   },
   {
-    id: "5034",
-    name: "A. U. P. S. Thiruthi",
+    name: "M.I.T. U P School P. VEMBALLUR",
   },
   {
-    id: "5035",
-    name: "A. M. U. P. S. Ullanam",
+    name: "G H S KUZHUR",
   },
   {
-    id: "5036",
-    name: "N. A. U. P. S. Vallikunnu",
+    name: "G U P S ANNAMANADA",
   },
   {
-    id: "5037",
-    name: "A. U. P. S. Velimukku",
+    name: "G U P S KUNDOOR",
   },
   {
-    id: "5038",
-    name: "V. J. Palli A. M. U. P. S. Velimukku",
+    name: "G U P S PUTHENCHIRA",
   },
   {
-    id: "5039",
-    name: "O. U. P. S. Thirurangadi",
+    name: "R M Higher Secondary School,\nAloor",
   },
   {
-    id: "5040",
-    name: "G. R. F. T. H. S. Tanur",
+    name: "G S H S ASHTAMICHIRA",
   },
   {
-    id: "5041",
-    name: "G. M. P. S. Cherumukku",
+    name: "A K M H S POYYA",
   },
   {
-    id: "5042",
-    name: "G. U. P. S. Karingappara",
+    name: "R H S THUMPUR",
   },
   {
-    id: "5043",
-    name: "G. M. U. P. S. Kodinhi",
+    name: "T H S PUTHENCHIRA",
   },
   {
-    id: "5044",
-    name: "G. M. U. P. S. Meenadathur",
+    name: "ST. MARY`S H S VYNTHALA",
   },
   {
-    id: "5045",
-    name: "G. M. U. P. S. Tanur Town",
+    name: "U H S ANNANAD",
   },
   {
-    id: "5046",
-    name: "G. M. U. P. S. Cheerankadappuram",
+    name: "A L P C S KOTTANELLOOR",
   },
   {
-    id: "5047",
-    name: "MGLC Ossankadappuram.",
+    name: "S H C L P G S THUMBOOR",
   },
   {
-    id: "5048",
-    name: "MGLC Ottumpuram.",
+    name: "ST. FXL P S PUTHENCHIRA",
   },
   {
-    id: "5049",
-    name: "MGLC KormaThala.",
+    name: "D P M U P S CHAKKAMPARAMBU",
   },
   {
-    id: "5050",
-    name: "MGLC Kalanthiruthy.",
+    name: "ST. GEORGE C U P S KALLOOR",
   },
   {
-    id: "5051",
-    name: "C. P. P. H. M. H. S. Ozhur",
+    name: "S N V U P S ALOOR",
   },
   {
-    id: "5052",
-    name: "A. M. U. P. S. Areekad",
+    name: "S S U P S THAZHEKKAD",
   },
   {
-    id: "5053",
-    name: "S. V. A. U. P. S. Iringavur",
+    name: "A U P S THUMBOOR",
   },
   {
-    id: "5054",
-    name: "A. M. U. P. S. Klari North\nPalachiramad",
+    name: "ST. ANTONY`S U P S MALA\nPALLIPURAM",
   },
   {
-    id: "5055",
-    name: "A. M. U. P. S. Kanmanam",
+    name: "ST. THOMAS U P S POYYA",
   },
   {
-    id: "5056",
-    name: "A. M. U. P. S. Parakkal",
+    name: "L A I U P S KADUKUTTY",
   },
   {
-    id: "5057",
-    name: "A. U. P. S. Pariyapuram CenTral",
+    name: "U P S KATHIKUDAM",
   },
   {
-    id: "5058",
-    name: "A. M. U. P. S. GNANAPRABHA",
+    name: "ST. MERY`S U P S KAROOR",
   },
   {
-    id: "5059",
-    name: "A. M. U. P. S. Vaniyannur",
+    name: "T. P. S. H. S. Trikkur",
   },
   {
-    id: "5060",
-    name: "A. M. U. P. S. Ayyaya",
+    name: "G. H. S. Kannattupadam",
   },
   {
-    id: "5061",
-    name: "P. M. S. A. M. U. P. S. Cherumukku",
+    name: "A. P. H. S. Alagappanagar",
   },
   {
-    id: "5062",
-    name: "C. H. M. K. M. U. P. S. Kundur",
+    name: "G. T. S. Echippara",
   },
   {
-    id: "5063",
-    name: "S. N. U. P. S. Nannambra",
+    name: "G.J. B. S. Cherpu",
   },
   {
-    id: "5064",
-    name: "S. M. U. P. S. Tanur",
+    name: "G. U. P. S. PanamkuTTiChira",
   },
   {
-    id: "5065",
-    name: "K. P. N. M. U. P. S. Tanur",
+    name: "G. U. P. S. Vallachira",
   },
   {
-    id: "5066",
-    name: "GVHSS Chelari",
+    name: "C. N. N. B. H. S. Cherpu",
   },
   {
-    id: "5067",
-    name: "GMHSS C U Campus",
+    name: "C. N. N. G. H. S. Cherpu",
   },
   {
-    id: "5068",
-    name: "GVHSS Vengara",
+    name: "St. Thomas H. S. Vallachira",
   },
   {
-    id: "5069",
-    name: "GGVHSS Vengara",
+    name: "ST. Xavier` s H. S. Chevoor",
   },
   {
-    id: "5070",
-    name: "GHSS Othukkungal",
+    name: "Seraphic C. G. H. S. Peringottukara",
   },
   {
-    id: "5071",
-    name: "GHSS Peruvallur",
+    name: "S. N. M. H. S. Chazhoor",
   },
   {
-    id: "5072",
-    name: "GHSS Puthuparamba",
+    name: "S. B. H. S. KurumpilaVu",
   },
   {
-    id: "5073",
-    name: "GMLPS Cherur",
+    name: "ST. AnTony` s H. S. Pazhuvil",
   },
   {
-    id: "5074",
-    name: "GMLPS Cherukunnu",
+    name: "St. Joseph` s H. S. AVinissery",
   },
   {
-    id: "5075",
-    name: "GMLPS C.U. Campus",
+    name: "ST. Mary` s C. G. H. S. Ollur",
   },
   {
-    id: "5076",
-    name: "GMLPS Edakkaparamba",
+    name: "Deepthi H. S. Thalore",
   },
   {
-    id: "5077",
-    name: "GMLPS Iringallur",
+    name: "St. Joseph` s H. S. Velupadam",
   },
   {
-    id: "5078",
-    name: "GLPS Kannamangalam",
+    name: "MaTha H. S. MannampeTTa",
   },
   {
-    id: "5079",
-    name: "GLPS Klari",
+    name: "St. Anne` s M. G. S. PazhuVil",
   },
   {
-    id: "5080",
-    name: "GMLPS Kilinakode",
+    name: "RMLPS Arattupuzha",
   },
   {
-    id: "5081",
-    name: "GMLPS Koomanna",
+    name: "Sankara U. P. S. Alangad",
   },
   {
-    id: "5082",
-    name: "GLPS Kodalikundu",
+    name: "ST. AnTony` s U. P. S. Kodannur",
   },
   {
-    id: "5083",
-    name: "GMLPS MaTTaThur",
+    name: "K. L. S. U. P. S. PeruVanam",
   },
   {
-    id: "5084",
-    name: "GMLPS Mampuram",
+    name: "S. N. U. P. S. Pookode",
   },
   {
-    id: "5085",
-    name: "GMLPS Orakam Kizhmuri",
+    name: "St. Pius Xth C. U. P. S.\nVarandarappilly",
   },
   {
-    id: "5086",
-    name: "GLPS Nottappuram",
+    name: "ST. Raphel U. P. S. Kallur",
   },
   {
-    id: "5087",
-    name: "GMLPS Orakam Melmuri",
+    name: "A. U. P. S. Pallissery",
   },
   {
-    id: "5088",
-    name: "GLPS Orakam Melmuri",
+    name: "A.U. P. S. PerinChery",
   },
   {
-    id: "5089",
-    name: "GLPS Olakara",
+    name: "St. Teresita` s U. P. S. Thalore",
   },
   {
-    id: "5090",
-    name: "GLPS PeruVallur",
+    name: "J. U. P. S. Varandarappilly",
   },
   {
-    id: "5091",
-    name: "GLPS Pukayur",
+    name: "A. U. P. S. Vendore",
   },
   {
-    id: "5092",
-    name: "GLPS ThaTTanCherimala",
+    name: "VYLOPPILLY SMM GOVT.VHSS\nOLLUR",
   },
   {
-    id: "5093",
-    name: "GMLPS Koyappa",
+    name: "G. T. S. Peechi",
   },
   {
-    id: "5094",
-    name: "GLPS Orakam Kizhumuri",
+    name: "G. J. B. S. Mathikunnu",
   },
   {
-    id: "5095",
-    name: "GLPS Parambilpeedika",
+    name: "G. T. S. PananChery",
   },
   {
-    id: "5096",
-    name: "GUPS AR Nagar",
+    name: "G. U. P. S. Asarikad",
   },
   {
-    id: "5097",
-    name: "GMUPS Cherur",
+    name: "G. U. P. S. Moorkanikkara",
   },
   {
-    id: "5098",
-    name: "G U P S Cholakundu",
+    name: "G. U. P. S. RamaVarmapuram",
   },
   {
-    id: "5099",
-    name: "GMUPS Kannamangalam",
+    name: "TECHNICAL HS THRISSUR",
   },
   {
-    id: "5100",
-    name: "GUPS Klari",
+    name: "St. Thomas H. S. Thiroor",
   },
   {
-    id: "5101",
-    name: "GMUPS Kolappuram",
+    name: "Poomala H. S. Poomala",
   },
   {
-    id: "5102",
-    name: "GUPS Kuruka",
+    name: "Marthoma Girls H. S. Thrissur",
   },
   {
-    id: "5103",
-    name: "GUPS Thenhippalam",
+    name: "M. T. H. S. ChelakkoTTukara",
   },
   {
-    id: "5104",
-    name: "GUPS Valiyora",
+    name: "V. V. S. H. S. Mannuthy",
   },
   {
-    id: "5105",
-    name: "GUPS Mundothuparamba",
+    name: "ST SebasTian's C G H S Nellikkunnu",
   },
   {
-    id: "5106",
-    name: "KHMHS Valakkulam",
+    name: "A. A. H. S. KuTTenallur",
   },
   {
-    id: "5107",
-    name: "PPTMYHSS Cherur",
+    name: "H. F. C. G. H. S. Thrissur",
   },
   {
-    id: "5108",
-    name: "KMHSS KuTTor NorTh",
+    name: "B C H S MukkaTTukara",
   },
   {
-    id: "5109",
-    name: "ABDU RAHIMAN NAGAR HS,\nCHENDAPPURAYA",
+    name: "St. Raphel C. G. H. S. Ollur",
   },
   {
-    id: "5110",
-    name: "IUHSS Parappur",
+    name: "ST.Sebasian`s H. S.\nMannamangalam",
   },
   {
-    id: "5111",
-    name: "PKMMHSS Edarikkode",
+    name: "C. S. C. S. Nallangara",
   },
   {
-    id: "5112",
-    name: "MUHS Orakam",
+    name: "K. S. K. B. S. Kuttanellur",
   },
   {
-    id: "5113",
-    name: "AMLPS Arakkal Pullithara",
+    name: "M. P. S. .Mudicode",
   },
   {
-    id: "5114",
-    name: "AMLPS Chalilkundu",
+    name: "L. F. U. P. S. Poomala",
   },
   {
-    id: "5115",
-    name: "AMLPS Chathrathody",
+    name: "A. U. P. S. Marottichal",
   },
   {
-    id: "5116",
-    name: "BPALPS Cherukunnu",
+    name: "S. U. P. S. Kozhukulli",
   },
   {
-    id: "5117",
-    name: "ALPS Iringallur",
+    name: "St. Marys C. U. P. S. Chiyyaram",
   },
   {
-    id: "5118",
-    name: "AMLPS Iringallur",
+    name: "ST. AnTonys U. P. S. ParavaTTani",
   },
   {
-    id: "5119",
-    name: "AMLPS Iringallur East",
+    name: "A. U. P. S. Kannara",
   },
   {
-    id: "5120",
-    name: "AMLPS KaipaTTa",
+    name: "ST. Marys U. P. S. Lourdes\nThrissur",
   },
   {
-    id: "5121",
-    name: "AAHMLPS Puthiyathupuraya",
+    name: "U. P. S. Thanikudam",
   },
   {
-    id: "5122",
-    name: "AMLPS KoTTumala",
+    name: "E. K. M. U. P. S. Vaniampara",
   },
   {
-    id: "5123",
-    name: "AMLPS Kundil Paramba",
+    name: "N. S. U. P. S. Cheroor",
   },
   {
-    id: "5124",
-    name: "AMLPS KuTTallur",
+    name: "ST George`s U. P. S.\nMukkaTTukara",
   },
   {
-    id: "5125",
-    name: "SULPS Kuttur",
+    name: "C. J. M. U. P. S. Marathakara",
   },
   {
-    id: "5126",
-    name: "AMLPS KuTTur SouTh",
+    name: "Asha Bhavan SChool For Deaf",
   },
   {
-    id: "5127",
-    name: "MHMLPS Kuttur North",
+    name: "G. J. B. S. NEDUPUZHA",
   },
   {
-    id: "5128",
-    name: "AMLPS MaTTaThur NorTh",
+    name: "G. U. P. S. ARANATTUKARA",
   },
   {
-    id: "5129",
-    name: "ALPS Mundothparamba",
+    name: "G. U. P. S. ARIMPUR",
   },
   {
-    id: "5130",
-    name: "AMLPS Neerolpalam",
+    name: "G. U. P. S. CHOORAKKATTUKARA",
   },
   {
-    id: "5131",
-    name: "AMLPS Parappur East",
+    name: "G. U. P. S. OLARIKKARA",
   },
   {
-    id: "5132",
-    name: "AMLPS Parappur - Iringallur",
+    name: "G. W. U. P. S. PONNORE",
   },
   {
-    id: "5133",
-    name: "AMLPS Parappur West New",
+    name: "G. U. P. S. VARADIYAM",
   },
   {
-    id: "5134",
-    name: "AMLPS Padinharakkara",
+    name: "J. P. E. H. S. KOORKANCHERY",
   },
   {
-    id: "5135",
-    name: "AMLPS Perumpuzha",
+    name: "S. N. B. H. S. KANIMANGALAM",
   },
   {
-    id: "5136",
-    name: "PMSAMLPS Peruvallur",
+    name: "S. N. G. H. S. KANIMANGALAM",
   },
   {
-    id: "5137",
-    name: "TTKMALPS Thekkekulamba",
+    name: "H. S. ANTHIKAD",
   },
   {
-    id: "5138",
-    name: "AMLPS ThumpaThuparamba",
+    name: "S. H. OF MARY'S C. G. H. S.\nKANDASSANKADAVU",
   },
   {
-    id: "5139",
-    name: "AMLPS Thottasseriyara",
+    name: "S. N. G. S. H. S. KARAMUCK",
   },
   {
-    id: "5140",
-    name: "AMLPS Valiyora NorTh",
+    name: "T. H. S. ARANATTUKARA",
   },
   {
-    id: "5141",
-    name: "AMLPS Vengara Kuttur",
+    name: "I. J. G. H. S. ARANATTUKARA",
   },
   {
-    id: "5142",
-    name: "AMLPS CheruChola",
+    name: "ST. ANNE`S C. G. H. S. WEST FORT\nTHRISSUR",
   },
   {
-    id: "5143",
-    name: "ALPS Elampulasseri",
+    name: "H. S. ARIMPUR",
   },
   {
-    id: "5144",
-    name: "AMLPS Klari SouTh",
+    name: "ST .ANTONY`S H. S.\nPUTHENPEEDIKA",
   },
   {
-    id: "5145",
-    name: "AMLPS Parappur West",
+    name: "ST. ALOYSIUS H. S. ELTHURUTH",
   },
   {
-    id: "5146",
-    name: "ALPS Valakulam",
+    name: "L. F. C. G. H. S. OLARIKKARA",
   },
   {
-    id: "5147",
-    name: "AMUPS Atteeri",
+    name: "ST. JOHN`S H. S. PARAPPUR",
   },
   {
-    id: "5148",
-    name: "AUPS IrumbuChola",
+    name: "ST. GEORGE`S H. S. PUTTEKKARA",
   },
   {
-    id: "5149",
-    name: "AMUPS Kuttitharammal",
+    name: "S. D. V. H. S. PERAMANGALAM",
   },
   {
-    id: "5150",
-    name: "TSAMUPS MaTTaThur",
+    name: "ST. THOMAS C. G. S. KANJANY",
   },
   {
-    id: "5151",
-    name: "AUPS Thenhippalam",
+    name: "CHURCH SCHOOL KARAMUCK",
   },
   {
-    id: "5152",
-    name: "AMUPS Valiyora EasT",
+    name: "ST. MARY`S C. B. P. S. KOTTEKKAD",
   },
   {
-    id: "5153",
-    name: "MAMUPS Arrakkal",
+    name: "A. P. S. PARAKKAD",
   },
   {
-    id: "5154",
-    name: "AKHMUPS ChaThraThodi",
+    name: "T. F. M. S. ERAVU",
   },
   {
-    id: "5155",
-    name: "AUPS Edakkaparamba",
+    name: "ST. MARY`S H. F. C. U. P. S.\nAMBAKKAD",
   },
   {
-    id: "5156",
-    name: "PMSAMUPS KaraThode",
+    name: "N. C. U. P. S. AYYANTHOLE",
   },
   {
-    id: "5157",
-    name: "MHMUPS Kilinakode",
+    name: "ST. GEMMAS C. U. P. S. MANAKODY",
   },
   {
-    id: "5158",
-    name: "PMSAMUPS Nelliparamba",
+    name: "ST. IGNATIOUS U. P. S. MANALUR",
   },
   {
-    id: "5159",
-    name: "AUPS Parappur",
+    name: "ST. THERESAS C. U. P. S. MANALUR",
   },
   {
-    id: "5160",
-    name: "ISMUPS ParaChenapuraya",
+    name: "A. U. P. S. MANGATTUKARA",
   },
   {
-    id: "5161",
-    name: "MISMUPS Pengadkundilparamba",
+    name: "N. V. U. P. S. THRISSUR",
   },
   {
-    id: "5162",
-    name: "TIOUPS Peruvallur",
+    name: "S. R. C. U. P. S. EDAKKALATHUR",
   },
   {
-    id: "5163",
-    name: "PMSAMUPS Vengara - Kuttur",
+    name: "ST. THOMAS U. P. S. KANJANY",
   },
   {
-    id: "5164",
-    name: "G. J. B. S. VaTTamkulam",
+    name: "A. N. M. U. P. S. MANITHARA",
   },
   {
-    id: "5165",
-    name: "GoVt L.P.School Kololomba",
+    name: "A. U. P. S. PARAKKAD",
   },
   {
-    id: "5166",
-    name: "G. M. U. P. S. Edappal",
+    name: "AmriTha SpeeCh and Hearing\nImprovemenT SChool AyyanThole",
   },
   {
-    id: "5167",
-    name: "G. U. P. S. Kololamba",
+    name: "GOVT SMT HSS,CHELAKKARA,THRISSUR",
   },
   {
-    id: "5168",
-    name: "G. U. P. S. Othalur",
+    name: "GOVT HSS,CHERPU,THRISSUR",
   },
   {
-    id: "5169",
-    name: "G. U. P. S. PoThanur",
+    name: "GOVT MODEL GHSS,IRINJALAKKUDA,THRISSUR",
   },
   {
-    id: "5170",
-    name: "K. M. G. U. P. S. ThaVanur",
+    name: "GOVT HSS,KANDASSANKADAVU,THRISSUR",
   },
   {
-    id: "5171",
-    name: "G. U. P. S. VellanChery",
+    name: "GOVT HSS,KODAKARA,THRISSUR",
   },
   {
-    id: "5172",
-    name: "KOKKUR GOVT THS",
+    name: "P BHASKARAN MEMORIAL GOVT HSS,KODUNGALLUR,THRISSUR",
   },
   {
-    id: "5173",
-    name: "A. J. B. S. Chekanur",
+    name: "GOVT HSS,MACHAD,THRISSUR",
   },
   {
-    id: "5174",
-    name: "A. J. B. S. Nellisseri",
+    name: "KERALA VARMA MEMORIAL GHSS,ERIYAD,KODUNGALLOOR",
   },
   {
-    id: "5175",
-    name: "A. J. B. S. Udinikkara",
+    name: "GOVT FISHERIES HSS,NATTIKA,THRISSUR",
   },
   {
-    id: "5176",
-    name: "S. V. J. B. S. Kuttippala",
+    name: "GOVT HSS,PEECHI,THRISSUR",
   },
   {
-    id: "5177",
-    name: "K. V. U. P. S. Kakkidippuram",
+    name: "GOVT HSS,PERINGOTTUKARA,THRISSUR",
   },
   {
-    id: "5178",
-    name: "M. T. S. U. P. S. Nannamukku",
+    name: "GOVT MODEL HSS FOR BOYS,THRISSUR,THRISSUR",
   },
   {
-    id: "5179",
-    name: "M. A. M. U. P. S. Thavanur",
+    name: "GOVT HSS,VETTILAPPARA,THRISSUR",
   },
   {
-    id: "5180",
-    name: "C. P. N. U. P. S. Vattamkulam",
+    name: "GOVT HSS,CHERUTHURUTHY,THRISSUR",
   },
   {
-    id: "5181",
-    name: "A. U. P. S. Verur",
+    name: "MODEL BOYS VHSS,KUNNAMKULAM,THRISSUR",
   },
   {
-    id: "5182",
-    name: "B. T. M. U. P. S. Alankode",
+    name: "GOVT HSS,PATTIKKADU,THRISSUR",
   },
   {
-    id: "5183",
-    name: "V. P. U. P. S. Kaladi",
+    name: "GOVT MODEL BOYS HSS,CHALAKKUDI,THRISSUR",
   },
   {
-    id: "5184",
-    name: "A. U. P. S. Nellisseri",
+    name: "GOVT MODEL BOYS HSS,IRINJALAKKUDA,THRISSUR",
   },
   {
-    id: "5185",
-    name: "A. U. P. S. Perumparamba",
+    name: "GOVT HSS,VILLEDOM,THRISSUR",
   },
   {
-    id: "5186",
-    name: "S.S. U. P. S. Thrikkanapuram",
+    name: "MODEL BOY`S HSS,VADAKKANCHERY,THRISSUR",
   },
   {
-    id: "5187",
-    name: "Vijaya A. U. P. S. Thuyyam",
+    name: "GOVT HSS,CHAVAKKAD,THRISSUR",
   },
   {
-    id: "5188",
-    name: "S. S. M. U. P. S. Vadakkummuri",
+    name: "GOVT MHSS,NADAVARAMBU,THRISSUR",
   },
   {
-    id: "5189",
-    name: "G. U. P. S. AthaVanad",
+    name: "KKTM GOVT GIRL`S HSS,KODUNGALLUR,THRISSUR",
   },
   {
-    id: "5190",
-    name: "G. M. U. P. S. Karippole",
+    name: "GOVT HSS,IRANIKKULAM,THRISSUR",
   },
   {
-    id: "5191",
-    name: "G. U. P. S. Koodasseri",
+    name: "GOVT HSS,CHAIPANKUZHI,THRISSUR",
   },
   {
-    id: "5192",
-    name: "G. U. P. S. Painkannur",
+    name: "GOVT HSS,KARUPADANNA,THRISSUR",
   },
   {
-    id: "5193",
-    name: "G. U. P. S. Randathani",
+    name: "GOVT HSS,NANDIKARA,THRISSUR",
   },
   {
-    id: "5194",
-    name: "TECHNICAL HS KUTTIPPURAM",
+    name: "GOVT SAMITHY HSS,MELADOOR,MALA,THRISSUR",
   },
   {
-    id: "5195",
-    name: "V. V. M. H. S. Marakkara",
+    name: "GOVT HSS,EDAVILANGU,THRISSUR",
   },
   {
-    id: "5196",
-    name: "Cherural H. S. Kurumbathur",
+    name: "GOVT NALANDA HSS,KIZHUPPILAKKARA,THRISSUR",
   },
   {
-    id: "5197",
-    name: "Z. M. H. S. Poolamangalam",
+    name: "GOVT HSS,MANALOOR,THRISSUR",
   },
   {
-    id: "5198",
-    name: "Girls` H. S. Valanchery",
+    name: "GOVT HSS,KATTILAPOOVAM,THRISUR",
   },
   {
-    id: "5199",
-    name: "K. M. U. P. S. Edayur",
+    name: "GOVT VHSS,AYYANTHOLE,THRISSUR",
   },
   {
-    id: "5200",
-    name: "A. M. U. P. S. Irimbiliyam",
+    name: "GOVT SRVHSS,VELUR,THRISSUR",
   },
   {
-    id: "5201",
-    name: "A. U. P. S. Marakkara",
+    name: "GOVT HSS,KOCHANNUR,THRISSUR",
   },
   {
-    id: "5202",
-    name: "A. M. U. P. S. Melmuri SouTh",
+    name: "GOVT HSS,MULLASSERY,THRISSUR",
   },
   {
-    id: "5203",
-    name: "A. M. U. P. S. Pazhur",
+    name: "GVHSS,THALIKKULAM,THRISSUR",
   },
   {
-    id: "5204",
-    name: "A. M. U. P. S. Poolamangalam",
+    name: "GOVT HSS,ERUMAPETTY,THRISSUR",
   },
   {
-    id: "5205",
-    name: "A. M. U. P. S. Punnathala",
+    name: "GOVT HSS,VARAVOOR,THRISSUR",
   },
   {
-    id: "5206",
-    name: "A. M. U. P. S. Puramannur",
+    name: "GOVT HSS,PAZHAYANNOOR,THRISSUR",
   },
   {
-    id: "5207",
-    name: "K. V. U. P. S. Vadakkumbram",
+    name: "GOVT MODEL GIRLS HSS,KUNNAMKULAM,THRISSUR",
   },
   {
-    id: "5208",
-    name: "A. U. P. S. Vadakkumbram",
+    name: "SEETHI SAHIB MV HSS,EDAKKAZHIYOOR,THRISSUR",
   },
   {
-    id: "5209",
-    name: "A. U. P. S. Vaikathur",
+    name: "UNION HSS,MAMBRA,THRISSUR",
   },
   {
-    id: "5210",
-    name: "V. P. A. U. P. S. Vemdallur",
+    name: "SN HSS,IRINJALAKKUDA,THRISSUR",
   },
   {
-    id: "5211",
-    name: "K. M.A.U. P. S. Chellur",
+    name: "AKM HSS,POOCHATTY,THRISSUR",
   },
   {
-    id: "5212",
-    name: "A. U. P. S. Kadampuzha",
+    name: "SANTHA HSS, AVANOOR, THRISSUR",
   },
   {
-    id: "5213",
-    name: "K. M. A. U. P. S. Karthala",
+    name: "VIVEKODAYAM BHSS,THRISSUR",
   },
   {
-    id: "5214",
-    name: "N. I. A. U. P. S. KazhuThalloor",
+    name: "NHSS,IRINJALAKKUDA,THRISSUR",
   },
   {
-    id: "5215",
-    name: "A. U. P. S. NaduVattom",
+    name: "ST ANTONY`S HSS,AMMADAM,THRISSUR",
   },
   {
-    id: "5216",
-    name: "G. U. P. S. CheruVayikkara",
+    name: "SH CONVENT GHSS,CHALAKKUDY,THRISSUR",
   },
   {
-    id: "5217",
-    name: "G. F. U. P. S. PalapeTTy",
+    name: "ST CLARAS GHSS,THRISSUR",
   },
   {
-    id: "5218",
-    name: "G. M. U. P. S. Veliyancode South",
+    name: "SNDP HSS,PALLISSERY,THRISSUR",
   },
   {
-    id: "5219",
-    name: "G. F. U. P. S. Kadavanad",
+    name: "RM HSS,ALOOR,THRISSUR",
   },
   {
-    id: "5220",
-    name: "GLPS KadaVanad",
+    name: "CHALDEAN SYRIAN HSS,THRISSUR",
   },
   {
-    id: "5221",
-    name: "A. V. H. S. Ponnani",
+    name: "MASM VHSS,VENMANAD,THRISSUR",
   },
   {
-    id: "5222",
-    name: "P. G. H. S. Ponnani",
+    name: "ST ANTONY`S HSS,MALA,THRISSUR",
   },
   {
-    id: "5223",
-    name: "Vannery H. S. Perumpadappa",
+    name: "SREE KRISHNA HSS,GURUVAYOOR,THRISUUR",
   },
   {
-    id: "5224",
-    name: "A. U. P. S. Ayiroor",
+    name: "SACRED HEART CONVENT GHSS,THRISSUR",
   },
   {
-    id: "5225",
-    name: "New U. P. S. Eswaramangalam",
+    name: "SRKGVM HSS,PURANATTUKARA,THRISSUR",
   },
   {
-    id: "5226",
-    name: "Panampad.New.U.P.School",
+    name: "VPM SNDP HSS,KAZHIMBRAM,THRISSUR",
   },
   {
-    id: "5227",
-    name: "A. U. P. S. Panampad.",
+    name: "ST ANTONY`S HSS,PUDUCAUD,THRISSUR",
   },
   {
-    id: "5228",
-    name: "A. M. M. U. P. S. Perumpadappa",
+    name: "HSS,PANANGAD,MATHILAKAM,THRISSUR",
   },
   {
-    id: "5229",
-    name: "B. E. M. U. P. S. Ponnani",
+    name: "ST MARY`S HSS,KUZHIKKATTUSSERY,THRISSUR",
   },
   {
-    id: "5230",
-    name: "M. I. U. P. S. Ponnani",
+    name: "SOCCRASO HSS,MALA,THRISSUR",
   },
   {
-    id: "5231",
-    name: "T. I. U. P. S. Ponnani",
+    name: "ST SEBASTIANS HSS,KUTTIKKAD,THRISSUR",
   },
   {
-    id: "5232",
-    name: "C. M. M. U. P. S. Eramangalam",
+    name: "ST MARY`S HSS,IRINJALAKKUADA",
   },
   {
-    id: "5233",
-    name: "A. U. P. S. PuThuPonnani",
+    name: "HDP HSS,EDATHIRINJI,THRISSUR",
   },
   {
-    id: "5234",
-    name: "AMLP School Biyyam",
+    name: "LBS HSS,AVITTATHUR,THRISSUR",
   },
   {
-    id: "5235",
-    name: "G. M. U. P. S. BP Angadi",
+    name: "CMS HSS,THRISSUR",
   },
   {
-    id: "5236",
-    name: "G. U. P. S. ChamravaTTam",
+    name: "ST JOSEPH`S CG HSS,THRISSUR",
   },
   {
-    id: "5237",
-    name: "G. M. U. P. S. Edakkanad",
+    name: "ST RAPHEL`S CGHSS,OLLUR,THRISSUR",
   },
   {
-    id: "5238",
-    name: "G. U. P. S. PuraThur",
+    name: "CJMA HSS,VARANTHARAPALLI,THRISSUR",
   },
   {
-    id: "5239",
-    name: "G. U. P. S. Purathupadinjarekkara",
+    name: "SREE SARADA GHS,PURANATTUKARA,THRISSUR",
   },
   {
-    id: "5240",
-    name: "G. M. U. P. S. Tirur",
+    name: "ST ALOSIOUS HSS,ELTHURUTH",
   },
   {
-    id: "5241",
-    name: "G. M. U. P. S. ParaVanna",
+    name: "ST THOMAS COLLEGE HSS,THRISSUR",
   },
   {
-    id: "5242",
-    name: "Badhal sChool Pandazhi",
+    name: "ST THOMAS LHSS,THOPE,THRISSUR",
   },
   {
-    id: "5243",
-    name: "K. H. M. H. S. Alathiyur",
+    name: "ST JOSEPH`S HSS,PAVARATTY,THRISSUR",
   },
   {
-    id: "5244",
-    name: "V. P. L. S. Karathur",
+    name: "NHSS,ENGANDIYOOR,TRISSUR",
   },
   {
-    id: "5245",
-    name: "A. M. U. P. S. Chembra",
+    name: "LITTLE FLOWER CGHSS,GURUVAYOOR,THRISSUR",
   },
   {
-    id: "5246",
-    name: "V. V. U. P. S. Chennara",
+    name: "ST FRANCIS BHS,MATTOM,THRISSUR",
   },
   {
-    id: "5247",
-    name: "M. D. P. S. U. P. S. Ezhur",
+    name: "NSS VHSS,MUNDATHICODE,THRISSUR",
   },
   {
-    id: "5248",
-    name: "A. M. U. P. S. Kanjirakol",
+    name: "AI HSS, PADOOR,THRISSUR",
   },
   {
-    id: "5249",
-    name: "B. E. M. U. P. S. Codacal",
+    name: "SN TRUST HSS, NATTIKA,THRISUR",
   },
   {
-    id: "5250",
-    name: "A. M. U. P. S. KoTT",
+    name: "I.C.A.E. HSS, VADAKKEKAD, THRISSUR",
   },
   {
-    id: "5251",
-    name: "S. H. M. U. P. S. Kuttayi South",
+    name: "BETHANY ST. JOHNS HSS, KUNNAMKULAM, THRISSUR",
   },
   {
-    id: "5252",
-    name: "P. A. N. M. S. A. U. P. S. PaChaTTiri",
+    name: "NSS EM HSS, WEST FORT, THRISSUR",
   },
   {
-    id: "5253",
-    name: "K. A. U. P. S. Padiyam",
+    name: "VIVEKODAYAM GHSS, THRISSUR",
   },
   {
-    id: "5254",
-    name: "B. E. M. U. P. S. Parapperi",
+    name: "PERPECTUAL SUCCESS HSS, THUMUDIKUNNU",
   },
   {
-    id: "5255",
-    name: "A. U. P. S. Vallathole",
+    name: "KAMALA NEHRU MVHSS, VATANAPALLY, THRITHALLOOR",
   },
   {
-    id: "5256",
-    name: "A. M. U. P. S. VairanCode",
+    name: "DON BOSCO HSS, MULLAKKARA, MANNUTHY, THRISSUR",
   },
   {
-    id: "5257",
-    name: "A. M. U. P. S. Vettam",
+    name: "FOCUS EM HSS, THOTTAPPU",
   },
   {
-    id: "5258",
-    name: "SasTha A. U. P. S. ChamravaTTom",
+    name: "DE- PAUL EM HSS, CHOONDAL, THRISSUR",
   },
   {
-    id: "5259",
-    name: "A. M. U. P. S. Edakkulam",
+    name: "ST. JOSEPH`S MHSS, KURIACHIRA, THRISSUR",
   },
   {
-    id: "5260",
-    name: "P. K. T. B. M. U. P. S. KuTTayi\nVadikkal",
+    name: "ST. PAULS CONVENT EHSS KURIACHIRA, THRISSUR",
   },
   {
-    id: "5261",
-    name: "P.P.N.M.A. U. P. S. Tirur",
+    name: "LITTLE FLOWER CONVENT HSS, KORATTY",
   },
   {
-    id: "5262",
-    name: "GHSS AreaCode",
+    name: "VIMALA HSS, VELLIKKULANGARA",
   },
   {
-    id: "5263",
-    name: "GHSS KaVanur",
+    name: "CARMEL HSS, CHALAKKUDI",
   },
   {
-    id: "5264",
-    name: "GVHSS Kizhuparamba",
+    name: "BETHANY CONVENT GHSS, KUNNAMKULAM",
   },
   {
-    id: "5265",
-    name: "GMLPS Areacode West",
+    name: "DEEPTHI HSS, THALORE",
   },
   {
-    id: "5266",
-    name: "GLPS ChemrakaTTur",
+    name: "JPE HSS, KOORKKENCHERY",
   },
   {
-    id: "5267",
-    name: "GLPS Kavanur",
+    name: "CNN HSS, CHERPPU",
   },
   {
-    id: "5268",
-    name: "GMLPS Kizhuparamba",
+    name: "LITTLE FLOWER CONVENT HSS, IRINGALAKKUDA",
   },
   {
-    id: "5269",
-    name: "GLPS Kizhuparamba SouTh",
+    name: "ST.JOSEPH`S EMHSS, ERAVU, ARIMPUR",
   },
   {
-    id: "5270",
-    name: "GLPS Kozhakottur",
+    name: "ST. JOSEPH`S EM HSS ALOOR, KALLETTINKARA",
   },
   {
-    id: "5271",
-    name: "GLPS Kuniyil",
+    name: "HOLY CHILD CONVENT EMHSS, SNEHA GIRI, MALA",
   },
   {
-    id: "5272",
-    name: "GLPS Kuniyil South",
+    name: "SN GHSS, KANIMANGALAM",
   },
   {
-    id: "5273",
-    name: "GLPS KuThuparamba",
+    name: "CHENTRAPPINI HSS, CHENTRAPPINNI",
   },
   {
-    id: "5274",
-    name: "GLPS Palappatta",
+    name: "RAHMATH EM HSS, THOZHIYOOR",
   },
   {
-    id: "5275",
-    name: "GLPS PaThanapuram,Malappuram",
+    name: "DON BOSCO HSS, IRINJALAKKUDA.",
   },
   {
-    id: "5276",
-    name: "GLPS PaVanna",
+    name: "MALIK DINAR HSS, DESAMANGALAM",
   },
   {
-    id: "5277",
-    name: "GMLPS PuThalam",
+    name: "TMV HSS, PERUMPILAVU",
   },
   {
-    id: "5278",
-    name: "GLPS Thachanna",
+    name: "HOLY ANGEL`S HSS, OLLUR",
   },
   {
-    id: "5279",
-    name: "GLPS Thavarapparamba",
+    name: "SWAMI BHOOTHANANDA HSS, KURUMPILAVU",
   },
   {
-    id: "5280",
-    name: "GLPS Thencheri",
+    name: "S.N GUPTA SAMAJAM HSS, KARAMUKKU, KANDASSAMKADAVU",
   },
   {
-    id: "5281",
-    name: "GMUPS AreaCode",
+    name: "GANDHSMARAKA HSS, ASHTAMICHIRA",
   },
   {
-    id: "5282",
-    name: "GUPS Chundathumpoyil",
+    name: "TECHNICAL HSS, CHETTUVA, KUNDALIYUR, THRISSUR",
   },
   {
-    id: "5283",
-    name: "GUPS MaiThra",
+    name: "TECHNICAL HSS, VARADIAM, THRISSUR",
   },
   {
-    id: "5284",
-    name: "GUPS Moorkanad",
+    name: "GOVT. HSS, MANATHALA, THRISSUR",
   },
   {
-    id: "5285",
-    name: "GMUPS Mundambra",
+    name: "KADAPPURAM GOVT. HSS, CHAVAKKAD, THRISSUR",
   },
   {
-    id: "5286",
-    name: "GUPS Odakkayam",
+    name: "GOVT. FISHERIES HSS, KAIPAMANGALAM, THRISSUR",
   },
   {
-    id: "5287",
-    name: "GMUPS Perakkamanna",
+    name: "GOVT. MAPPILA HSS, CHAMAKKALA, THRISSUR",
   },
   {
-    id: "5288",
-    name: "G. H. S Pannippara",
+    name: "GOVT. HSS, THANNYAM, THRISSUR",
   },
   {
-    id: "5289",
-    name: "GUPS Vadasseri",
+    name: "GOVT. CMHSS, KUTTOOR, THRISSUR",
   },
   {
-    id: "5290",
-    name: "GUPS Vettilappara",
+    name: "GOVT. HSS, KATTOOR, IRINJALAKUDA, THRISSUR",
   },
   {
-    id: "5291",
-    name: "GUPS Chengara",
+    name: "MARMHSS, SANTHIPURAM, THRISSUR",
   },
   {
-    id: "5292",
-    name: "SOHS Areacode",
+    name: "GOVT. HSS, MUPPILIYAM, THRISSUR",
   },
   {
-    id: "5293",
-    name: "CHMKMHS Kavanur",
+    name: "GOVT. HSS, ANCHERY, OLLUR, THRISSUR",
   },
   {
-    id: "5294",
-    name: "SSHSS Moorkanad",
+    name: "GOVT. HSS, VADANAPPALLY, THRISSUR",
   },
   {
-    id: "5295",
-    name: "AMLPS Chengara",
+    name: "GOVT. HSS, VALAPPAD, THRISSUR",
   },
   {
-    id: "5296",
-    name: "AMLPS Elayur",
+    name: "GOVT. VHSS, PUTHENCHIRA, THRISSUR",
   },
   {
-    id: "5297",
-    name: "AMLPS IriveTTy",
+    name: "GOVT. HSS, KADIKKAD, PUNNAYOORKULAM PANCHAYAT, THR",
   },
   {
-    id: "5298",
-    name: "AMLPS Kallarattickal",
+    name: "GOVT. HSS, KADAVALLUR, THRISSUR",
   },
   {
-    id: "5299",
-    name: "AMLPS Kallingal",
+    name: "PANJAL GOVT. HSS, PANJAL, THRISSUR",
   },
   {
-    id: "5300",
-    name: "JMLPS Kizhakkechathallur",
+    name: "GOVT. FISHERIES TECHNICAL HSS, CHAVAKKAD, THRISSUR",
   },
   {
-    id: "5301",
-    name: "ALPS NorTh KozhakoTTur",
+    name: "GOVT. HSS, CHEMBUCHIRA, THRISSUR",
   },
   {
-    id: "5302",
-    name: "MJMAMLPS Pallimukku",
+    name: "GOVT. MODEL VHSS FOR GIRLS, THRISSUR TOWN, THRISSU",
   },
   {
-    id: "5303",
-    name: "AMLPS Ugrapuram",
+    name: "GOVT. HSS, POOKUNNAM, THRISSUR",
   },
   {
-    id: "5304",
-    name: "SNMALPS Ugrapuram",
+    name: "MES HSS, SREEMARAMAPURAM, THRISSUR",
   },
   {
-    id: "5305",
-    name: "ALPS UrangaTTiri",
+    name: "HOLY FAMILY CONVENT GIRLS HSS, CHEMPUKAVU, THRISSU",
   },
   {
-    id: "5306",
-    name: "AMLPS Vadakkummala",
+    name: "ST. ANNE`S GIRLS HSS, EDATHIRUTHY, THRISSUR",
   },
   {
-    id: "5307",
-    name: "ALPS Vadakkumuri",
+    name: "VIDYAJYOTHI EM PUBLIC HSS, MATHILAKOM, THRISSUR",
   },
   {
-    id: "5308",
-    name: "AMLPS Vakkaloor",
+    name: "VIDHYA JYOTHI HSS, MATHILAKOM, THRISSUR",
   },
   {
-    id: "5309",
-    name: "MALPS Valillapuzha",
+    name: "FOCUS ISLAMIC HSS, KADAPPURAM",
   },
   {
-    id: "5310",
-    name: "CVNMALPS WesT ChaThallur",
+    name: "VIMALA HSS, VELLIKULANGARA, THRISSUR",
   },
   {
-    id: "5311",
-    name: "VAUPS KaVannur",
+    name: "POOMALA HSS, MULANKUNNATHKAVU, CHETTUPARA, THRISSU",
   },
   {
-    id: "5312",
-    name: "JMUPS KizhakkeChaThallur",
+    name: "RM VHSS, PERINJANAM, THRISSUR",
   },
   {
-    id: "5313",
-    name: "Al Anwar UPS Kuniyil",
+    name: "CONCORD ENGLISH HSS, CHIRAMANENGAD, THRISSUR",
   },
   {
-    id: "5314",
-    name: "MKKHMAUPS PaThanapuram",
+    name: "GURU SREE HSS, PULLUT, KODUNGALLUR, THRISSUR",
   },
   {
-    id: "5315",
-    name: "AMUPS Therattammal",
+    name: "ST. THOMAS HSS, ENGANDIYOOR POST, THRISSUR",
   },
   {
-    id: "5316",
-    name: "MAOUPS Elayur",
+    name: "MODEL RESIDENTIAL SCHOOL, CHALAKKUDY, THRISSUR",
   },
   {
-    id: "5317",
-    name: "AUPS Kozhakottur",
+    name: "GOVT. SARVODAYA HSS, TRIKKUR, THRISSUR",
   },
   {
-    id: "5318",
-    name: "G.U.P.S. Edapatta",
+    name: "GHS, MARATHANCODE,THRISSUR",
   },
   {
-    id: "5319",
-    name: "G.M.U.P.S. Kappu",
+    name: "ALAGAPPANAGAR PANCHAYATH HSS, ALAGAPPANAAGAR,THRISSUR",
   },
   {
-    id: "5320",
-    name: "G.M.U.P.S. Oravambram",
+    name: "GOVT. HSS, ELAVALLY,THRISSUR",
   },
   {
-    id: "5321",
-    name: "R.M.H.S. MelaTTur",
+    name: "GHSS PAMBADY, THRISSUR",
   },
   {
-    id: "5322",
-    name: "A.S.M.H.S. Velliyancheri",
+    name: "GHSS PULLUT (V. K. RAJAN MEMORIAL),,THRISSUR",
   },
   {
-    id: "5323",
-    name: "T.H.S. ThaChinganadam",
+    name: "ST. JOSEPHâ€™S HS S,MELOOR,THRISSUR",
   },
   {
-    id: "5324",
-    name: "A.M.H.S. Vengoor",
+    name: "ST. THOMAS HSS, MAYANNUR,THRISSUR",
   },
   {
-    id: "5325",
-    name: "D.N.M.A.U.P.S. EdayaTTur",
+    name: "NSS HSS, MULLOORKARA,,THRISSUR",
   },
   {
-    id: "5326",
-    name: "A.U.P.S. Pacheeri",
+    name: "ST. JOSEPHâ€™S HSS, AVINISSERY,THRISSUR",
   },
   {
-    id: "5327",
-    name: "K.A.U.P.S. ThaChingadam",
+    name: "ST.THOMAS HSS,VALLACHIRA,THRISSUR",
   },
   {
-    id: "5328",
-    name: "A.U.P.S. Velliyancheri",
+    name: "SREEKRISHNA HSS,THRISSUR",
   },
   {
-    id: "5329",
-    name: "A.M.U.P.S. VeTaThur",
+    name: "BVMHSS, KALAPRAMBU.P.O ARIPALAM ,THRISSUR- 680 688",
   },
   {
-    id: "5330",
-    name: "P.T.M.U.P.S. Chemmaniyode",
+    name: "SREE DURGA VILASAM HSS, PERAMANGALAM,THRISSUR",
   },
   {
-    id: "5331",
-    name: "P.S.A.U.P.S. KizhaTTur",
+    name: "DEEPTHI HSS, THALORE,THRISSUR",
   },
   {
-    id: "5332",
-    name: "P.T.M.U.P.S. Mannarmala",
+    name: "AKM HSS, POYYA,THRISSUR",
   },
   {
-    id: "5333",
-    name: "P.T.M.U.P.S. Mulliyankurssi",
+    name: "ST. JOSEPHâ€™S & ST. CYRILâ€™S HSS, WEST MANGAD,,THRISSUR",
   },
   {
-    id: "5334",
-    name: "V.J.U.P.S. Nenmini",
+    name: "ST. JOHNâ€™S HSS, PARAPPUR,THRISSUR",
   },
   {
-    id: "5335",
-    name: "GMVHSS Nilambur",
+    name: "ST.ANTONYS HSS,PUTHENPEEDIKA,THRISSUR",
   },
   {
-    id: "5336",
-    name: "GHSS Eranhimangad",
+    name: "H S S ARIMPUR, ARIMPUR P O ,THRISSUR",
   },
   {
-    id: "5337",
-    name: "GMVHSS Mampad",
+    name: "ST. ANTONYâ€™S HSS, PAZHUVIL,THRISSUR",
   },
   {
-    id: "5338",
-    name: "GHSS Pookkottumpadam",
+    name: "MIC AL AMEEN HSS, KECHERY,THRISSUR",
   },
   {
-    id: "5339",
-    name: "GHSS MooThedaTh",
+    name: "UNION HSS, ANNANAD,THRISSUR",
   },
   {
-    id: "5340",
-    name: "GHSS Edakkara",
+    name: "MAM HSS, KORATTY,THRISSUR",
   },
   {
-    id: "5341",
-    name: "IGMMRS Nilambur",
+    name: "ST.JOSEPH HSS, MATHILAKAM,THRISSUR",
   },
   {
-    id: "5342",
-    name: "Amarambalam GLPS",
+    name: "POOMALA HSS, POOMALA,THRISSUR",
   },
   {
-    id: "5343",
-    name: "Cholamunda GLPS",
+    name: "ST. ANTONYâ€™S HSS, MOORKANAD,THRISSUR",
   },
   {
-    id: "5344",
-    name: "Chungathara GLPS",
+    name: "V.R.APPU MASTER MEMORIAL HSS, THAIKKAD,THRISSUR",
   },
   {
-    id: "5345",
-    name: "ChungaThara PanChayaT ALPS",
+    name: "PODUJANA VIDHYABYASA SAMITHY HSS, PARAPPUKKARA,THRISSUR",
   },
   {
-    id: "5346",
-    name: "EdiVanna Estate GLPS",
+    name: "ST. ANNEâ€™S HSS, KOTTAPPURAM,THRISSUR",
   },
   {
-    id: "5347",
-    name: "Karimbuzha GMLPS",
+    name: "MARTHOMA GIRLS HSS, THRISSUR,THRISSUR",
   },
   {
-    id: "5348",
-    name: "Kattumunda GLPS",
+    name: "LFGHSS, CHELAKKARA,THRISSUR",
   },
   {
-    id: "5349",
-    name: "KaTTumunda EasT GLPS",
+    name: "APPUNNI MEMORIAL HSS, CHEMMANNUR,THRISSUR-680 517",
   },
   {
-    id: "5350",
-    name: "KaValamukkatta GLPS",
+    name: "ASHA BHAVAN H.S.S FOR DEAF, PADAVARATT. P.O, OLLUR, THRISSUR.",
   },
   {
-    id: "5351",
-    name: "Konamunda GLPS",
+    name: "LITTLE FLOWER CONVENT HSS, KORATTI, THRISSUR",
   },
   {
-    id: "5352",
-    name: "Mamankara GLPS",
+    name: "ISLAMIC VHSS , ORUMANAYUR, THRISSUR",
   },
   {
-    id: "5353",
-    name: "Mampad NorTh GMLPS",
+    name: "GOVT. VHSS, DESAMANGALAM",
   },
   {
-    id: "5354",
-    name: "Mankuth GLPS",
+    name: "GOVT. VHSS, PAZHANHI",
   },
   {
-    id: "5355",
-    name: "Meppadam GLPS",
+    name: "GOVT. VHSS PUTHOOR",
   },
   {
-    id: "5356",
-    name: "Mooleppadam GLPS",
+    name: "GHS VIJAYARAGHAVAPURAM",
   },
   {
-    id: "5357",
-    name: "MukkaTTa GMLPS",
+    name: "VHSS KARALAM",
   },
   {
-    id: "5358",
-    name: "NaduVakkad GLPS",
+    name: "RMVHS PERINGANAM",
   },
   {
-    id: "5359",
-    name: "Nedungayam GTLPS",
+    name: "SNVVHSS, ALOOR",
   },
   {
-    id: "5360",
-    name: "Nilambur GMLPS",
+    name: "MRRAMAN MEMMORIALHS CHAVAKKAD",
   },
   {
-    id: "5361",
-    name: "PaThirippadam GLPS",
+    name: "SNMHS CHAZHOOR",
   },
   {
-    id: "5362",
-    name: "Payampadam GLPS",
+    name: "CNN HS CHERPU",
   },
   {
-    id: "5363",
-    name: "PerumbaThur GLPS",
+    name: "CHENTHRA PINNI HS",
   },
   {
-    id: "5364",
-    name: "Poolappadam GLPS",
+    name: "SEETHI SAHIB MEMMORIAL HS AZHEEKODE",
   },
   {
-    id: "5365",
-    name: "Pullippadam GLPS",
+    name: "HOLY CROSS HS MAPRANAM",
   },
   {
-    id: "5366",
-    name: "Vadapuram GMLPS",
+    name: "ST. THOMAS HS TIROOR",
   },
   {
-    id: "5367",
-    name: "ValanThole GTLPS",
+    name: "PS HS THIRUMUDIKKUNNU",
   },
   {
-    id: "5368",
-    name: "Varikkal GLPS",
+    name: "SREENARAYANA GUPTHA SAMAJAM HS",
   },
   {
-    id: "5369",
-    name: "VeeTTikuTh GLPS",
+    name: "ST.GEORGE HS PARIYARAM",
   },
   {
-    id: "5370",
-    name: "Vendekkumpotty GLPS",
+    name: "HOLY FAMILY CGHS CHEMBUKKAVU",
   },
   {
-    id: "5371",
-    name: "Amarambalam SouTh GUPS",
+    name: "JPE HS KOORKANCHERY",
   },
   {
-    id: "5372",
-    name: "Eranhimangad GUPS",
+    name: "ST..AUGUSTINE HSS KUTTANELLUR",
   },
   {
-    id: "5373",
-    name: "Kurumbalangode GUPS",
+    name: "BETHELEHEM CONVENT HS, PAZHAYA OLLUKKARA",
   },
   {
-    id: "5374",
-    name: "Marutha GUPS",
+    name: "HS THIRUVALAYANNUR",
   },
   {
-    id: "5375",
-    name: "Munderi GTUPS",
+    name: "ST.JOSEPH HS VELUPADAM",
   },
   {
-    id: "5376",
-    name: "Myladi GUPS",
+    name: "GOVERNMENT HIGHER SCHOOL KANNATTUPADAM THRISSUR",
   },
   {
-    id: "5377",
-    name: "Nilambur GMUPS",
+    name: "ST GORGE HIGHER SECONDARY SCHOOL THOZHYOOR",
   },
   {
-    id: "5378",
-    name: "Pallikuth GUPS",
+    name: "ST. GEORGE HSS, PUTTEKKARA, TRISSUR",
   },
   {
-    id: "5379",
-    name: "Paramba GUPS",
+    name: "ST ANTONYS HSS ,PAZHUVIL, THRISSUR",
   },
   {
-    id: "5380",
-    name: "Kattumunda East GUPS",
+    name: "LOURDE MATHA EM HSS, CHERPU",
   },
   {
-    id: "5381",
-    name: "Konnamanna GUPS",
+    name: "THEQWA RESIDENTIAL GIRLS HSS, ANDATHODE",
   },
   {
-    id: "5382",
-    name: "Pulliyil GUPS",
+    name: "ASSISSI EM HIGHER SECONDARY SCHOOL, THALAKKOTTUKKARA(PO),KECHERY,THRISSUR-680 501",
   },
   {
-    id: "5383",
-    name: "SSA KuTTimala",
+    name: "JMJEM HSS, ATHANI",
   },
   {
-    id: "5384",
-    name: "MSNSSHS chakkalakuth",
-  },
-  {
-    id: "5385",
-    name: "KMHS Karulai",
-  },
-  {
-    id: "5386",
-    name: "CHS Pothukal",
-  },
-  {
-    id: "5387",
-    name: "MPMHS ChungaThara",
-  },
-  {
-    id: "5388",
-    name: "NHS Erumamunda",
-  },
-  {
-    id: "5389",
-    name: "CKHS Manimooli",
-  },
-  {
-    id: "5390",
-    name: "SVVHSS Palemad",
-  },
-  {
-    id: "5391",
-    name: "NHS Narokkavu",
-  },
-  {
-    id: "5392",
-    name: "MESHSS Mampad",
-  },
-  {
-    id: "5393",
-    name: "MTHSS ChungaThara",
-  },
-  {
-    id: "5394",
-    name: "Bhoodan Colony ALPS",
-  },
-  {
-    id: "5395",
-    name: "Chempankolly AMLPS",
-  },
-  {
-    id: "5396",
-    name: "Chempankolly St. Paul`s ALPS",
-  },
-  {
-    id: "5397",
-    name: "CheTTiyangadi ALPS",
-  },
-  {
-    id: "5398",
-    name: "East Kalkulam MMMLPS",
-  },
-  {
-    id: "5399",
-    name: "Karulai DALPS",
-  },
-  {
-    id: "5400",
-    name: "Konnamanna ALPS",
-  },
-  {
-    id: "5401",
-    name: "KooTTampara AKMMLPS",
-  },
-  {
-    id: "5402",
-    name: "Manimooli CKLPS",
-  },
-  {
-    id: "5403",
-    name: "Modapoika ALPS",
-  },
-  {
-    id: "5404",
-    name: "Munda MOLPS",
-  },
-  {
-    id: "5405",
-    name: "Mundapadam ALPS",
-  },
-  {
-    id: "5406",
-    name: "Odayikkal PUMLPS",
-  },
-  {
-    id: "5407",
-    name: "Palemad SVLPS",
-  },
-  {
-    id: "5408",
-    name: "Palengara UMALPS",
-  },
-  {
-    id: "5409",
-    name: "Pongallur AKMLPS",
-  },
-  {
-    id: "5410",
-    name: "Pulliyil DALPS",
-  },
-  {
-    id: "5411",
-    name: "Pullode AMLPS",
-  },
-  {
-    id: "5412",
-    name: "Thelpara NAAMALPS",
-  },
-  {
-    id: "5413",
-    name: "Velimbiyampadam MKMMLPS",
-  },
-  {
-    id: "5414",
-    name: "Karunechi LFALPS",
-  },
-  {
-    id: "5415",
-    name: "Chelode SAUPS",
-  },
-  {
-    id: "5416",
-    name: "Karakkode RMAUPS",
-  },
-  {
-    id: "5417",
-    name: "Mampad AMUPS",
-  },
-  {
-    id: "5418",
-    name: "Muthukad Bharath Matha AUPS",
-  },
-  {
-    id: "5419",
-    name: "NeTTikulam AUPS",
-  },
-  {
-    id: "5420",
-    name: "Pookottumpadam AUPS",
-  },
-  {
-    id: "5421",
-    name: "Thalippadam PMMUPS",
-  },
-  {
-    id: "5422",
-    name: "ThannikadaVu AUPS",
-  },
-  {
-    id: "5423",
-    name: "Uppada N S S U P S",
-  },
-  {
-    id: "5424",
-    name: "VazhikkadaVu AUPS",
-  },
-  {
-    id: "5425",
-    name: "Chandakunnu AUPS",
-  },
-  {
-    id: "5426",
-    name: "EdiVanna St. Thomas AUPS",
-  },
-  {
-    id: "5427",
-    name: "Karappuram CUPS",
-  },
-  {
-    id: "5428",
-    name: "Mamankara St. Mary`s AUPS",
-  },
-  {
-    id: "5429",
-    name: "Munda MOUPS",
-  },
-  {
-    id: "5430",
-    name: "Ramankuth PMSAUPS",
-  },
-  {
-    id: "5431",
-    name: "Vadapuram MCUPS",
-  },
-  {
-    id: "5432",
-    name: "Buds school for the hearing\nimpaired",
-  },
-  {
-    id: "5433",
-    name: "GHSS Pullangode",
-  },
-  {
-    id: "5434",
-    name: "VMCGHSS Wandoor",
-  },
-  {
-    id: "5435",
-    name: "GHSS Porur",
-  },
-  {
-    id: "5436",
-    name: "GGVHSS Wandoor",
-  },
-  {
-    id: "5437",
-    name: "GHSS Vaniyambalam",
-  },
-  {
-    id: "5438",
-    name: "GHSS ThiruVali",
-  },
-  {
-    id: "5439",
-    name: "GHSS Karuvarakundu",
-  },
-  {
-    id: "5440",
-    name: "GHSS ThuVVur",
-  },
-  {
-    id: "5441",
-    name: "Adakkakundu GLPS",
-  },
-  {
-    id: "5442",
-    name: "Akkarakulam GLPS",
-  },
-  {
-    id: "5443",
-    name: "Amapoyil GLPS",
-  },
-  {
-    id: "5444",
-    name: "Chokkad Girijan Colony GLPS",
-  },
-  {
-    id: "5445",
-    name: "Kallamoola GLPS",
-  },
-  {
-    id: "5446",
-    name: "KaruVarakundu GLPS",
-  },
-  {
-    id: "5447",
-    name: "KizhakkeThala GLPS",
-  },
-  {
-    id: "5448",
-    name: "Koithakundu GLPS",
-  },
-  {
-    id: "5449",
-    name: "Kooripoyil GLPS",
-  },
-  {
-    id: "5450",
-    name: "Mampattumoola GLPS",
-  },
-  {
-    id: "5451",
-    name: "Mampuzha GLPS",
-  },
-  {
-    id: "5452",
-    name: "Mundakkode GLPS",
-  },
-  {
-    id: "5453",
-    name: "PedayenThal GLPS",
-  },
-  {
-    id: "5454",
-    name: "Pallisseri GLPS",
-  },
-  {
-    id: "5455",
-    name: "PaTTanamkundu GLPS",
-  },
-  {
-    id: "5456",
-    name: "Payyakode GLPS",
-  },
-  {
-    id: "5457",
-    name: "Pazhedam Panampoyil GLPS",
-  },
-  {
-    id: "5458",
-    name: "Pookkulam GLPS",
-  },
-  {
-    id: "5459",
-    name: "Poongode GLPS",
-  },
-  {
-    id: "5460",
-    name: "Porur GLPS",
-  },
-  {
-    id: "5461",
-    name: "Pullengode GMLPS",
-  },
-  {
-    id: "5462",
-    name: "PulVetta GLPS",
-  },
-  {
-    id: "5463",
-    name: "SanThinagar GLPS",
-  },
-  {
-    id: "5464",
-    name: "Tharish GLPS",
-  },
-  {
-    id: "5465",
-    name: "Thiruvali GLPS",
-  },
-  {
-    id: "5466",
-    name: "ThuVVur GLPS",
-  },
-  {
-    id: "5467",
-    name: "UThirampoyil GLPS",
-  },
-  {
-    id: "5468",
-    name: "Vaniyambalam CKAGLPS",
-  },
-  {
-    id: "5469",
-    name: "Chadangamkulam GLPS",
-  },
-  {
-    id: "5470",
-    name: "AnchachaVidi GMUPS",
-  },
-  {
-    id: "5471",
-    name: "Chokkad GMUPS",
-  },
-  {
-    id: "5472",
-    name: "KalikaVu Bazar GMUPS",
-  },
-  {
-    id: "5473",
-    name: "Kappilkarad GUPS",
-  },
-  {
-    id: "5474",
-    name: "Maliyekkal GUPS",
-  },
-  {
-    id: "5475",
-    name: "NeelanCheri GUPS",
-  },
-  {
-    id: "5476",
-    name: "Pazhayakadakkal GUPS",
-  },
-  {
-    id: "5477",
-    name: "CHS Adakkakundu",
-  },
-  {
-    id: "5478",
-    name: "Akkarappuram ALPS",
-  },
-  {
-    id: "5479",
-    name: "AmbalakadaVu AMLPS",
-  },
-  {
-    id: "5480",
-    name: "Ayanikode ALPS",
-  },
-  {
-    id: "5481",
-    name: "Chathankottupuram UMALPS",
-  },
-  {
-    id: "5482",
-    name: "Chayiyode MALPS",
-  },
-  {
-    id: "5483",
-    name: "Edappulam AMLPS",
-  },
-  {
-    id: "5484",
-    name: "KoTTakunnu ALPS",
-  },
-  {
-    id: "5485",
-    name: "ThiruVali AMLPS",
-  },
-  {
-    id: "5486",
-    name: "Thodikapulam ALPS",
-  },
-  {
-    id: "5487",
-    name: "Veethanasseri ALPS",
-  },
-  {
-    id: "5488",
-    name: "Vellampuram ALPS",
-  },
-  {
-    id: "5489",
-    name: "Wandoor MALPS",
-  },
-  {
-    id: "5490",
-    name: "Wandoor OALPS",
-  },
-  {
-    id: "5491",
-    name: "Iringattiri AMLPS",
-  },
-  {
-    id: "5492",
-    name: "Palakkode ALPS",
-  },
-  {
-    id: "5493",
-    name: "Punnappala ALPS",
-  },
-  {
-    id: "5494",
-    name: "Cherukode KMMAUPS",
-  },
-  {
-    id: "5495",
-    name: "Eriyad AUPS",
-  },
-  {
-    id: "5496",
-    name: "Kappil SVAUPS",
-  },
-  {
-    id: "5497",
-    name: "U g N N M A U P S Porur",
-  },
-  {
-    id: "5498",
-    name: "Vellayur AUPS",
-  },
-  {
-    id: "5499",
-    name: "Karuvarakundu darunajath\nOrphanage UPS",
-  },
-  {
-    id: "5500",
-    name: "Thuvur Tharakkal AUPS",
-  },
-  {
-    id: "5501",
-    name: "mandoor Orphanage U.P.S.",
-  },
-  {
-    id: "8982",
-    name: "GOVT GHSS,MALAPPURAM,MALAPPURAM",
-  },
-  {
-    id: "8983",
-    name: "GOVT HSS,PANDIKKAD,MALAPPURAM",
-  },
-  {
-    id: "8984",
-    name: "GOVT MHSS,PERINTHALMANNA,MALAPPURAM",
-  },
-  {
-    id: "8985",
-    name: "DEVDHAR GOVT HSS,THANUR,MALAPPUARM",
-  },
-  {
-    id: "8986",
-    name: "GOVT BOYS HSS,TIRUR,TIRUR P O, MALAPPURAM",
-  },
-  {
-    id: "8987",
-    name: "GOVT HSS,THIRURANGADI,MALAPPURAM",
-  },
-  {
-    id: "8988",
-    name: "GOVT VMC HSS,WANDOOR,MALAPPURAM",
-  },
-  {
-    id: "8989",
-    name: "GOVT HSS,PULLENGODE,MALAPPPUARM",
-  },
-  {
-    id: "8990",
-    name: "GOVT HSS,MUTHEDATHU,MALAPPUARM",
-  },
-  {
-    id: "8991",
-    name: "GOVT BOYS HSS,MANJERY,MALAPPURAM",
-  },
-  {
-    id: "8992",
-    name: "GOVT RAJAH`S HSS, KOTTAKKAL, MALAPPUARAM",
-  },
-  {
-    id: "8993",
-    name: "GOVT HSS, KOKKUR, MALAPPURAM",
-  },
-  {
-    id: "8994",
-    name: "GOVT HSS,VAZHAKKAD,MALAPPURAM",
-  },
-  {
-    id: "8995",
-    name: "GOVT HSS,KUNNAKKAVU,MALAPPURAM",
-  },
-  {
-    id: "8996",
-    name: "GOVT HSS,THIRUVALI,MALAPPURAM",
-  },
-  {
-    id: "8997",
-    name: "GOVT HSS,PULAMANTHOLE,MALAPPURAM",
-  },
-  {
-    id: "8998",
-    name: "GOVT HSS, POOKKOTTUMPADAM, MALAPPURAM",
-  },
-  {
-    id: "8999",
-    name: "GOVT HSS, MARANCHERY, MALAPPURAM",
-  },
-  {
-    id: "9000",
-    name: "GOVT HSS,AREACODE,MALAPPURAM",
-  },
-  {
-    id: "9001",
-    name: "GOVT MODEL HSS,CALICUT UNIVERSITY,MALAPPURAM",
-  },
-  {
-    id: "9002",
-    name: "GOVT HSS,EDAPPAL,MALAPPURAM",
-  },
-  {
-    id: "9003",
-    name: "GOVT HSS,OTHUKKUNGAL,MALAPPURAM",
-  },
-  {
-    id: "9004",
-    name: "GOVT HSS,KOTTAPPURAM,MALAPPURAM",
-  },
-  {
-    id: "9005",
-    name: "GOVT HSS,MANKADA,MALAPPURAM",
-  },
-  {
-    id: "9006",
-    name: "GOVT HSS,KUZHIMANNA,MALAPPURAM",
-  },
-  {
-    id: "9007",
-    name: "GOVT GIRLS HSS,MANJERY,MALAPPURAM",
-  },
-  {
-    id: "9008",
-    name: "GOVT HSS,KARUVARAKUNDU,MALAPPURAM",
-  },
-  {
-    id: "9009",
-    name: "GOVT HSS,POOKKOTTOOR,MALAPPURAM",
-  },
-  {
-    id: "9010",
-    name: "GOVT HSS,ANAMANGADU,MALAPPURAM",
-  },
-  {
-    id: "9011",
-    name: "GOVT MANAVEDAN HSS, NILAMBUR,MALAPPURAM",
-  },
-  {
-    id: "9012",
-    name: "GOVT HSS,PANG,MALAPPURAM",
-  },
-  {
-    id: "9013",
-    name: "GOVT HSS,KATTILANGADI,MALAPPURAM",
-  },
-  {
-    id: "9014",
-    name: "GOVT HSS,KADANCHERY,MALAPPURAM",
-  },
-  {
-    id: "9015",
-    name: "GOVT HSS,KUTTIPURAM,MALAPPURAM",
-  },
-  {
-    id: "9016",
-    name: "PCN GHSS, MOOKKUTHALA,MALAPPURAM",
-  },
-  {
-    id: "9017",
-    name: "GOVT HSS,VETTATHUR,MALAPPURAM",
-  },
-  {
-    id: "9018",
-    name: "MMM HSS,KUTTAI,MALAPPURAM",
-  },
-  {
-    id: "9019",
-    name: "IKT HSS,CHERUKULAMBA,MALAPPURAM",
-  },
-  {
-    id: "9020",
-    name: "MSM HSS,KALLINGALPARAMBA,MALAPPURAM",
-  },
-  {
-    id: "9021",
-    name: "S V HSS,PALEMED,MALAPPURAM",
-  },
-  {
-    id: "9022",
-    name: "NNM HSS,CHELAMBRA,MALAPPURAM",
-  },
-  {
-    id: "9023",
-    name: "NIRMALA HSS,ERUMAMUDNDA,MALAPPURAM",
-  },
-  {
-    id: "9024",
-    name: "VALANCHERY HSS, MALAPPURAM",
-  },
-  {
-    id: "9025",
-    name: "NM HSS,THIRUNAVAYA,MALAPPURAM",
-  },
-  {
-    id: "9026",
-    name: "ST MARY`S HSS,PARIYAPURAM,MALAPPURAM",
-  },
-  {
-    id: "9027",
-    name: "DU HSS,THOOTHA ,MALAPPURAM",
-  },
-  {
-    id: "9028",
-    name: "MV HSS,ARIYALLUR,MALAPPURAM",
-  },
-  {
-    id: "9029",
-    name: "KM HSS,KUTTOOR NORTH, MALAPPURAM",
-  },
-  {
-    id: "9030",
-    name: "CB HSS,VALLIKKUNNU,MALAPPURAM",
-  },
-  {
-    id: "9031",
-    name: "HMY HSS,MANJERY,MALAPPURAM",
-  },
-  {
-    id: "9032",
-    name: "EMEA HSS,KONDOTTY,MALAPPURAM",
-  },
-  {
-    id: "9033",
-    name: "MI HSS,PONNANI,MALAPPURAM",
-  },
-  {
-    id: "9034",
-    name: "DHO HSS POOKKARATHARA, MALAPPURAM",
-  },
-  {
-    id: "9035",
-    name: "ORIENTAL HSS,THIRURANGADI,MALAPPURAM",
-  },
-  {
-    id: "9036",
-    name: "SS HSS,MOORKANAD,URANGATTIRI P O, MALAPPURAM",
-  },
-  {
-    id: "9037",
-    name: "MI HSS FOR GIRLS, PUDUPPONNANI,",
-  },
-  {
-    id: "9038",
-    name: "PPM HSS,KOTTUKKARA,MALAPPURAM",
-  },
-  {
-    id: "9039",
-    name: "PMSAPT HSS,KAKKOVE,MALAPPURAM",
-  },
-  {
-    id: "9040",
-    name: "PPTMY HSS VENGARA,CHEROOR,MALAPPURAM",
-  },
-  {
-    id: "9041",
-    name: "SNM HSS,PARAPPANANGADI,MALAPPURAM",
-  },
-  {
-    id: "9042",
-    name: "PTM HSS,THAZHEKKODE,MALAPPURAM",
-  },
-  {
-    id: "9043",
-    name: "PKMM HSS,EDARIKKODE,MALAPPURAM",
-  },
-  {
-    id: "9044",
-    name: "SSM HSS,THEYYALINKAL,MALAPPURAM",
-  },
-  {
-    id: "9045",
-    name: "VPK MM HSS,PUTHUR,PALLIKKAL,MALAPPURAM",
-  },
-  {
-    id: "9046",
-    name: "CATHOLICATE HSS,POTHUKAL,MALAPPURAM",
-  },
-  {
-    id: "9047",
-    name: "VHM HSS,MORAYOOR,MALAPPURAM",
-  },
-  {
-    id: "9048",
-    name: "BROTHER`S HSS,MAVANADIYOOR,MALAPPURAM",
-  },
-  {
-    id: "9049",
-    name: "BYK VHSS,VALAVANNUR,MALAPPURAM",
-  },
-  {
-    id: "9050",
-    name: "ST GEMMA`S GIRLS HSS,MALAPPUARM",
-  },
-  {
-    id: "9051",
-    name: "MSP HSS,MALAPPURAM,MALAPPURAM",
-  },
-  {
-    id: "9052",
-    name: "PANTHALLOOR HSS,KADAMODE,MALAPPURAM",
-  },
-  {
-    id: "9053",
-    name: "MES HSS,PONNANI,TIRUR,MALAPPURAM",
-  },
-  {
-    id: "9054",
-    name: "MES HSS,MAMPAD,MALAPPURAM",
-  },
-  {
-    id: "9055",
-    name: "MARTHOMA HSS,CHUNGATHARA,MALAPPURAM",
-  },
-  {
-    id: "9056",
-    name: "D.H.R.HSS FOR WOMEN, EDAPPAL, MALAPPURAM",
-  },
-  {
-    id: "9057",
-    name: "A.R.HSS FOR GIRLS, PAVITTAPURAM, MALAPPURAM",
-  },
-  {
-    id: "9058",
-    name: "J.S.R.HSS FOR GIRLS, MANJERI, MALAPPURAM",
-  },
-  {
-    id: "9059",
-    name: "E.M.O.R.GIRLS HSS, PALAD,MALAPPURAM",
-  },
-  {
-    id: "9060",
-    name: "J.N.R. HSS, SALAH NAGAR, MALAPPURAM",
-  },
-  {
-    id: "9061",
-    name: "ASM HSS, VELLIYENCHERRY, (VIA) MANJERI",
-  },
-  {
-    id: "9062",
-    name: "TECHNICAL HSS, VATTAMKULAM, MALAPPURAM",
-  },
-  {
-    id: "9063",
-    name: "TECHNICAL HSS, VAZHAKKAD, MALAPPURAM",
-  },
-  {
-    id: "9064",
-    name: "THSS, PERINTALMANNA",
-  },
-  {
-    id: "9065",
-    name: "MARKEZ HSS, ATHAVANAD, KARTHALA, MALAPPURAM",
-  },
-  {
-    id: "9066",
-    name: "THARAGAN HSS, ANGADIPURAM",
-  },
-  {
-    id: "9067",
-    name: "MPM HSS, CHUNAGATHARA, NILAMPUR",
-  },
-  {
-    id: "9068",
-    name: "ALMANAR HSS, WADIMANAR, RANDATHANI",
-  },
-  {
-    id: "9069",
-    name: "AMS HSS, PAZHAMKULANGARA, THIRUR",
-  },
-  {
-    id: "9070",
-    name: "MAJLIS HSS, VENGAD, VALANCHERY",
-  },
-  {
-    id: "9071",
-    name: "FATHIMA MATHA HSS, POOKAYIL, TIRUR",
-  },
-  {
-    id: "9072",
-    name: "DARUNNAJATH HSS, KARUVARAKKUNDU, (VIA) MANJERI",
-  },
-  {
-    id: "9073",
-    name: "ISLAHIYA EM HSS, DOWN HILL, MALAPPURAM",
-  },
-  {
-    id: "9074",
-    name: "LITTLE FLOWER HSS, NILAMBUR, MALAPPURAM",
-  },
-  {
-    id: "9075",
-    name: "NSS EM HSS, MANJERI, MALAPPURAM",
-  },
-  {
-    id: "9076",
-    name: "CRESCENT HSS, ADAKKAKKUNDU, KALIKKAVU, MALAPPURAM",
-  },
-  {
-    id: "9077",
-    name: "IU HSS, PARAPPUR, KOTTAKKAL, MALAPPURAM",
-  },
-  {
-    id: "9078",
-    name: "KHIDAMATUL ISLAM HSS, EDAKKULAM, THIRUNAVAYA",
-  },
-  {
-    id: "9079",
-    name: "MVM HSS, VALAYAMKULAM, KOKKUR, MALAPPURAM",
-  },
-  {
-    id: "9080",
-    name: "JM HSS, PARNEKKADU, THIRUR",
-  },
-  {
-    id: "9081",
-    name: "CRESCENT RHSS, VELLIMUKKU SOUTH, MALAPPURAM",
-  },
-  {
-    id: "9082",
-    name: "CHERURAL HSS, KURUMBATHUR, ANANTHAVOOR, MALAPPURAM",
-  },
-  {
-    id: "9083",
-    name: "FAROOK EM HSS PARAPPUR, KOTTAKKAL",
-  },
-  {
-    id: "9084",
-    name: "DARUL HIDAYA HSS, EDAPPAL, MALAPPURAM",
-  },
-  {
-    id: "9085",
-    name: "THANGAL`S HSS, VADAKKANGARA",
-  },
-  {
-    id: "9086",
-    name: "PONNANI GIRLS HSS, PONNANI",
-  },
-  {
-    id: "9087",
-    name: "UNITY HSS, WANDOOR",
-  },
-  {
-    id: "9088",
-    name: "PES HSS, PARAPPANADU",
-  },
-  {
-    id: "9089",
-    name: "PRESENTATION HSS PERINTHALMANNA",
-  },
-  {
-    id: "9090",
-    name: "FAZPHARI ORPHANAGE HSS, PADINJATTUMURI, KOOTTILANG",
-  },
-  {
-    id: "9091",
-    name: "ST. PAUL`S HSS, THENJIPALAM, KOHINOOR",
-  },
-  {
-    id: "9092",
-    name: "NATIONAL HSS, KOLATHOOR, MALAPPURAM",
-  },
-  {
-    id: "9093",
-    name: "KM NSS UNION HSS, ATHALUR",
-  },
-  {
-    id: "9094",
-    name: "NSS K HSS, PUTHOOR",
-  },
-  {
-    id: "9095",
-    name: "S.O HSS, ARECODE",
-  },
-  {
-    id: "9096",
-    name: "RM HSS, MELATTOOR",
-  },
-  {
-    id: "9097",
-    name: "MTI HSS, THALAKADATHUR",
-  },
-  {
-    id: "9098",
-    name: "TECHNICAL HSS, MUTHUVALLUR, KONDOTTY",
-  },
-  {
-    id: "9099",
-    name: "KY HSS, KATTILANGADI, ATHAVANAD, MALAPPURAM",
-  },
-  {
-    id: "9100",
-    name: "GOVT. HSS, CHERIYAMUNDAM, MALAPPURAM",
-  },
-  {
-    id: "9101",
-    name: "GOVT. BOYS HSS, MALAPPURAM",
-  },
-  {
-    id: "9102",
-    name: "GOVT. HSS, IRUMBUZHI, MALAPPURAM",
-  },
-  {
-    id: "9103",
-    name: "GOVT. HSS, PATTIKKAD, MALAPPURAM",
-  },
-  {
-    id: "9104",
-    name: "GOVT. GIRLS HSS, PERINTHALMANNA, MALAPPURAM",
-  },
-  {
-    id: "9105",
-    name: "GOVT. HSS, NIRAMARUTHOOR, MALAPPURAM",
-  },
-  {
-    id: "9106",
-    name: "GOVT. HSS, CHETTIYANKINAR, MALAPPURAM",
-  },
-  {
-    id: "9107",
-    name: "GOVT. HSS, KADUNGAPURAM, PUZHAKKATTIRI, MALAPPURAM",
-  },
-  {
-    id: "9108",
-    name: "GOVT. SEETHI HAJI MEMORIAL HSS, EDAVANNA, MALAPPUR",
-  },
-  {
-    id: "9109",
-    name: "GOVT. HSS, VELIANCODE, MALAPPURAM",
-  },
-  {
-    id: "9110",
-    name: "GOVT. VHSS, OMANNOOR, CHEEKODE, MALAPPURAM",
-  },
-  {
-    id: "9111",
-    name: "GOVT. VHSS, KIZHUPARAMBA, MALAPPURAM",
-  },
-  {
-    id: "9112",
-    name: "GOVT. VHSS, KONDOTTY, MALAPPURAM",
-  },
-  {
-    id: "9113",
-    name: "GOVT. VHSS, PULLANNOOR, VALLUVAMBRAM, MALAPPURAM",
-  },
-  {
-    id: "9114",
-    name: "GOVT. HSS, PERUVALLUR, MALAPPURAM",
-  },
-  {
-    id: "9115",
-    name: "GOVT. HSS, PURATHOOR, MALAPPURAM",
-  },
-  {
-    id: "9116",
-    name: "GOVT. HSS, EZHUR, MALAPPURAM",
-  },
-  {
-    id: "9117",
-    name: "GOVT. HSS, EDAKKARA, NILAMBOOR, MALAPPURAM",
-  },
-  {
-    id: "9118",
-    name: "GOVT. HSS, ALIPARAMBA, PERINTHALMANNA, MALAPPURAM",
-  },
-  {
-    id: "9119",
-    name: "GOVT. HSS, KAVANUR, ELAYOOR, MALAPPURAM",
-  },
-  {
-    id: "9120",
-    name: "GHSS, NELLIKUTH, MANJERI, MALAPPURAM",
-  },
-  {
-    id: "9121",
-    name: "GOVT. VHSS, ARIMBRA, MALAPPURAM",
-  },
-  {
-    id: "9122",
-    name: "GOVT. GIRLS HSS, B.P.ANGADI, MALAPPURAM",
-  },
-  {
-    id: "9123",
-    name: "GVHSS, PARAVANNA, MALAPPURAM",
-  },
-  {
-    id: "9124",
-    name: "GOVT. HSS, THADATHILPARAMBA, MALAPPURAM",
-  },
-  {
-    id: "9125",
-    name: "GOVT. GIRLS HSS, WANDOOR, MALAPPURAM",
-  },
-  {
-    id: "9126",
-    name: "GOVT. HSS, PORUR, MALAPPURAM",
-  },
-  {
-    id: "9127",
-    name: "GOVT. HSS, THUVOOR, MALAPPURAM",
-  },
-  {
-    id: "9128",
-    name: "GOVT. HSS, PALAPPETTY, MALAPPURAM",
-  },
-  {
-    id: "9129",
-    name: "GOVT. HSS, MANKADA, PALLIPPURAM, MALAPPURAM",
-  },
-  {
-    id: "9130",
-    name: "GOVT. VHSS,KALPAKANCHERRY, MALAPPURAM",
-  },
-  {
-    id: "9131",
-    name: "GOVT. HSS, ERANHIMANGAD, MALAPPURAM",
-  },
-  {
-    id: "9132",
-    name: "GOVT. HSS, IRIMBILIYAM, MALAPPURAM",
-  },
-  {
-    id: "9133",
-    name: "GOVT. VHSS, MAMPAD, MALAPPURAM",
-  },
-  {
-    id: "9134",
-    name: "GOVT. HSS, MATTUMMAL, ATHAVANAD, MALAPPURAM",
-  },
-  {
-    id: "9135",
-    name: "GOVT. VHSS, VENGARA, MALAPPURAM",
-  },
-  {
-    id: "9136",
-    name: "GOVT. MODEL VOCATIONAL HIGHER SECONDARY SCHOOL, VENGARA TOWN, MALAPPURAM",
-  },
-  {
-    id: "9137",
-    name: "GOVT. HSS, VANIYAMBALAM, MALAPPURAM",
-  },
-  {
-    id: "9138",
-    name: "GOVT. HSS, KARAKUNNU, MALAPPURAM",
-  },
-  {
-    id: "9139",
-    name: "GOVT. VHSS, MAKKARAPARAMBA, MALAPPURAM",
-  },
-  {
-    id: "9140",
-    name: "GOVT. HSS, PUTHUPARAMBA, MALAPPURAM",
-  },
-  {
-    id: "9141",
-    name: "GOVT. HSS, CHELARI, MALAPPURAM",
-  },
-  {
-    id: "9142",
-    name: "GOVT. HSS, PERASSANNOOR, MALAPPURAM",
-  },
-  {
-    id: "9143",
-    name: "GOVT. REGIONAL FISHERIES TECHNICAL VHSS, THANUR, M",
-  },
-  {
-    id: "9144",
-    name: "GOVT. HSS, THRIKKAV, PONNANI, MALAPPURAM",
-  },
-  {
-    id: "9145",
-    name: "KELAPPAN MEMORIAL GOVT. VHSS, THAVANNOOR, MALAPPUR",
-  },
-  {
-    id: "9146",
-    name: "MES HSS, IRIMBILIYAM, MALAPPURAM",
-  },
-  {
-    id: "9147",
-    name: "AL-HUDA HSS, KARIYANKALLU, KARIPPUR.P.O, MALAPPURA",
-  },
-  {
-    id: "9148",
-    name: "MIC HSS, ATHANIKKAL, VALLUVAMBRAM, MALAPPURAM",
-  },
-  {
-    id: "9149",
-    name: "ISS HSS, EZHUVATHIRUTHY, PONNANI, MALAPPURAM",
-  },
-  {
-    id: "9150",
-    name: "AL-FURQAN ENGLISH HSS, SANTHIVAYAL, MALAPPURAM",
-  },
-  {
-    id: "9151",
-    name: "MA HSS, KODINHI, MALAPPURAM",
-  },
-  {
-    id: "9152",
-    name: "NAJMUL HUDA HSS, KOTTAKKAL, MALAPPURAM",
-  },
-  {
-    id: "9153",
-    name: "NOORUL ISLAMIC HSS, NELLIKUNNU, VELAYAPPURAM, VENG",
-  },
-  {
-    id: "9154",
-    name: "MARKAZU SSAKHAFATHIL ISLAMIYYA HSS, KUNDOOR, MALAP",
-  },
-  {
-    id: "9155",
-    name: "GARDEN VALLEY EM HSS, KUTTIPPALA, MALAPPURAM",
-  },
-  {
-    id: "9156",
-    name: "ANVAR ENGLISH HSS, THIRURKAD, MALAPPURAM",
-  },
-  {
-    id: "9157",
-    name: "NAJATH ISLAMIC CENTRE, PERUVALLUR",
-  },
-  {
-    id: "9158",
-    name: "MAMBAUL HUDA HSS KUZHICHENA,P.O.KANNATTIPADI",
-  },
-  {
-    id: "9159",
-    name: "AL-IHSAN ENGLISH HSS VENGARA,O.K.MURI.P.O",
-  },
-  {
-    id: "9160",
-    name: "CRESCENT HSS POTTUR MUDUR.P.O",
-  },
-  {
-    id: "9161",
-    name: "IDEAL ENGLISH HSS KADAKASSERY,AYANKALAM.PO.MALAPPU",
-  },
-  {
-    id: "9162",
-    name: "RAHMATH PUBLIC HSS, PULLUR, KARUVAMBRAM.P.O, MANJE",
-  },
-  {
-    id: "9163",
-    name: "GUIDANCE HSS, KATTUPPARA, CHELAKKAD.P.O, PULAMANTH",
-  },
-  {
-    id: "9164",
-    name: "HSM ENGLISH & MALAYALAM MEDIUM HSS, THANUR, MALAPP",
-  },
-  {
-    id: "9165",
-    name: "AZHAR ENGLISH MEDIUM HSS, MARANCHERY, MALAPPURAM",
-  },
-  {
-    id: "9166",
-    name: "WOMEN`S ISLAMIYA COLLEGE HSS, ERIYAD, WANDOOR, MAL",
-  },
-  {
-    id: "9167",
-    name: "RAHMANIYA COLLEGE HSS, MAMPAD, MEMPADAM.P.O, MALAP",
-  },
-  {
-    id: "9168",
-    name: "POOKOYA THANGAL MEMORIAL HSS, VELLILA, MALAPPURAM",
-  },
-  {
-    id: "9169",
-    name: "NATIONAL ENGLISH MEDIUM HSS, WANDINOOR, CHEMMAD, T",
-  },
-  {
-    id: "9170",
-    name: "HMS HSS, THURACKAL, MANJERI, MALAPPURAM",
-  },
-  {
-    id: "9171",
-    name: "MALABAR ENGLISH HSS, PARAPPUR, KOTTAKKAL, MALAPPUR",
-  },
-  {
-    id: "9172",
-    name: "NATIONAL PUBLIC HSS, KILINAKODE, CHERUR, MALAPPURA",
-  },
-  {
-    id: "9173",
-    name: "JAMIYA ISLAMIA HSS, MANJERI, MALAPPURAM",
-  },
-  {
-    id: "9174",
-    name: "PSMA PTM HSS, VETTICHIRA.P.O, PUNNATHALA, MALAPPUR",
-  },
-  {
-    id: "9175",
-    name: "IET HSS, MARAVANTHA, KAVANCHERY.P.O, MALAPPURAM",
-  },
-  {
-    id: "9176",
-    name: "ISLAMIYA COLLEGE HSS, SANTHAPURAM, PUTTIKAD, MALAP",
-  },
-  {
-    id: "9177",
-    name: "CRESCENT HSS, ADAKKAKUNDU, MALAPPURAM",
-  },
-  {
-    id: "9178",
-    name: "EDAVANNA JAMIA HSS, MALAPPURAM",
-  },
-  {
-    id: "9179",
-    name: "IDEAL HSS, DHARMAGIRI, CHELAKKAD, MALAPPURAM",
-  },
-  {
-    id: "9180",
-    name: "HI ORPHANAGE HSS, OLAVATTUR, MALAPPURAM",
-  },
-  {
-    id: "9181",
-    name: "RAMANATTUKARA HSS, RAMANATTUKARA,MALAPPURAM.",
-  },
-  {
-    id: "9182",
-    name: "VVM HSS MARAKKARA, MARAKKARA PO, VIA KADAMPUZHA,MALAPPURAM.",
-  },
-  {
-    id: "9183",
-    name: "PMSAM HSS, CHEMMEENKADAVU, KODUR,MALAPPURAM.",
-  },
-  {
-    id: "9184",
-    name: "CHEKKUTTY HAJI MEMORIAL HSS, POOKOLOTHUR,MALAPPURAM.",
-  },
-  {
-    id: "9185",
-    name: "NATIONAL HSS, KOLATHUR, KOLATHUR. P. O, MALAPPURAM - 679 338",
-  },
-  {
-    id: "9186",
-    name: "CRESENT HS S,ADAKKAKUNDU,MALAPPURAM.",
-  },
-  {
-    id: "9187",
-    name: "MANNAM SMARAKA NSS HSS, CHAKKALAKKUTH,MALAPPURAM.",
-  },
-  {
-    id: "9188",
-    name: "MPM HSS, CHUNGATHARA,MALAPPURAM.",
-  },
-  {
-    id: "9189",
-    name: "KM HSS, KARULAI,MALAPPURAM.",
-  },
-  {
-    id: "9190",
-    name: "ASM HSS VELLIYANCHERY, VELLLIYANCHERY PO, MALAPPURAM",
-  },
-  {
-    id: "9191",
-    name: "CPPMHSS ,OZHUR,MALAPPURAM.",
-  },
-  {
-    id: "9192",
-    name: "KUNHIMON HAJI MEMORIAL HSS, ALATHIYUR,MALAPPURAM.",
-  },
-  {
-    id: "9193",
-    name: "ABDURAHIMAN NAGAR HSS,CHENDAPPURAYA, ABDURAHIMAN NAGAR.P.O, MALAPPURAM",
-  },
-  {
-    id: "9194",
-    name: "KUNHAHAMMAD HAJI MEMORIAL HSS, VALAKULAM ,MALAPPURAM.",
-  },
-  {
-    id: "9195",
-    name: "MOONNIYUR HSS,,MALAPPURAM.",
-  },
-  {
-    id: "9196",
-    name: "IUHSS PARAPPUR, KOTTAKKAL, MALAPPURAM",
-  },
-  {
-    id: "9197",
-    name: "RM HSS, MELATTUR, P. O,MALAPPURAM. 679 326",
-  },
-  {
-    id: "9198",
-    name: "NAROKKAVU HSS. NAROKKAVU,MALAPPURAM.",
-  },
-  {
-    id: "9199",
-    name: "ISLAHIYA ORIENTAL HSS, EDAVANNA ,MALAPPURAM.",
-  },
-  {
-    id: "9200",
-    name: "BEM HSS,PARAPPANANGADI,MALAPPURAM.",
-  },
-  {
-    id: "9201",
-    name: "PMSA HSS,ELANKUR,MALAPPURAM.",
-  },
-  {
-    id: "9202",
-    name: "THARAKAN HSS, ANGADIPURAM,MALAPPURAM.",
-  },
-  {
-    id: "9203",
-    name: "DARUL ULOOM HSS, PANAKKAD,MALAPPURAM.",
-  },
-  {
-    id: "9204",
-    name: "A.V HSS, PONNANI,MALAPPURAM.",
-  },
-  {
-    id: "9205",
-    name: "SMM HSS, RAYIRIMANGALAM,MALAPPURAM.",
-  },
-  {
-    id: "9206",
-    name: "GHSS ,MUTHUVALLUR,MALAPPURAM.",
-  },
-  {
-    id: "9207",
-    name: "AKM HSS, KOTTOOR,MALAPPURAM",
-  },
-  {
-    id: "9208",
-    name: "PMSA VHSS, CHAPPANANGADI,MALAPPURAM",
-  },
-  {
-    id: "9209",
-    name: "GOVT.HS PONMUNDAM NORTH",
-  },
-  {
-    id: "9210",
-    name: "GHS CHULLIKODE",
-  },
-  {
-    id: "9211",
-    name: "IGMR HS NILAMBUR",
-  },
-  {
-    id: "9212",
-    name: "AM HS THIRUKAD",
-  },
-  {
-    id: "9213",
-    name: "SULLAMUSSALAM ORIENTAL HS AREEKODE",
-  },
-  {
-    id: "9214",
-    name: "KKM HS CHEEKODE",
-  },
-  {
-    id: "9215",
-    name: "AHS PAREL MAMPATTUMOOLA",
-  },
-  {
-    id: "9216",
-    name: "CH MUHAMMED KOYA MEMMORIALHSS KAVANUR",
-  },
-  {
-    id: "9217",
-    name: "THACHINGANADAM HS",
-  },
-  {
-    id: "9218",
-    name: "TSS VADAKKANGARA",
-  },
-  {
-    id: "9219",
-    name: "MMET HS MELMURI",
-  },
-  {
-    id: "9220",
-    name: "AMHS VENGOOR",
-  },
-  {
-    id: "9221",
-    name: "CRESCENT HSS OZHUKUR",
-  },
-  {
-    id: "9222",
-    name: "MARKAZUL ULOOM HS ORRAKAM",
-  },
-  {
-    id: "9223",
-    name: "VANDHERI HS PUNNAYURKULAM",
-  },
-  {
-    id: "9224",
-    name: "GIRLS HS PONNANI",
-  },
-  {
-    id: "9225",
-    name: "HIO HS OLAVATTUR",
-  },
-  {
-    id: "9226",
-    name: "CHERURAL HS KURUMBATHUR",
-  },
-  {
-    id: "9227",
-    name: "CKHS MANIMOOLY",
-  },
-  {
-    id: "9228",
-    name: "Girls Higher Secondary School,Valanchery, Malappuram",
-  },
-  {
-    id: "9229",
-    name: "IZZATHUL ISLAM HSS, KUZHIMANNA",
-  },
-  {
-    id: "9230",
-    name: "MAJMA U HIGHER SECONDARY SCHOOL, THERATTUMMAL",
-  },
-  {
-    id: "9231",
-    name: "MALABAR HIGHER SECONDARY SCHOOL, ALATHIYOOR, TIRUR",
-  },
-  {
-    id: "9232",
-    name: "MAJMA U HSS, VETTICHIRA",
-  },
-  {
-    id: "9233",
-    name: "UMMUL QURA HSS, MONGAM PO, MALAPPURAM",
-  },
-  {
-    id: "9234",
-    name: "MADIN HIGHER SECONDARY SCHOOL, SWALATH NAGAR, MELMURI",
-  },
-  {
-    id: "9235",
-    name: "ISLAMIC RESIDENTIAL HSS, POOKATTIRI, EDAYUR",
-  },
-  {
-    id: "9236",
-    name: "MAO HIGHER SECONDARY SCHOOL, ELAYUR",
-  },
-  {
-    id: "9237",
-    name: "AL-IRSHAD PUBLIC SCHOOL, TRIPPANACHI",
-  },
-  {
-    id: "9238",
-    name: "VIJAYAMATHA EM HSS, PONNANI",
-  },
-  {
-    id: "9239",
-    name: "MARKAZ HSS, KARATHUR,THIRUNAVAYA,MALAPPURAM",
-  },
-  {
-    id: "9240",
-    name: "ASSISI SCHOOL FOR THE DEAF , MALAPARAMBU, PALACHODE P O MALAPPURAM",
-  },
-  {
-    id: "9241",
-    name: "PEEVEES HIGHER SEC. SCHOOL, NILAMBUR, MALAPPURAM",
-  },
-  {
-    id: "9242",
-    name: "KARUNYA BHAVAN HIGHER SECONDARY SCHOOL FOR THE DEAF",
+    name: "IDCE HSS, ORUMANAYUR",
   },
 ];

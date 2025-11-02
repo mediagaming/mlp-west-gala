@@ -11,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen">
       <HeroSection />
       <section
-        className=" py-20 sm:py-32 bg-gradient-to-tr from-secondary/10 via-background to-primary/10 px-5 relative overflow-hidden"
+        className=" py-20 sm:py-32 bg-gradient-to-tr from-secondary/60 via-background to-primary/60 px-5 relative overflow-hidden"
         id="register"
         // style={{
         //   background:

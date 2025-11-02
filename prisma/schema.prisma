@@ -19,15 +19,16 @@ model Registration {
   name      String
   mobile    String
   dob       String
-  place     String
+  class     Class
+  course    Course
   division  String
   school    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   Checkin   Checkin?
 
-  @@map("registrations")
   @@unique([mobile, dob], map: "registrations_unique_mobile_dob_idx")
+  @@map("registrations")
 }
 
 model Checkin {
@@ -37,4 +38,16 @@ model Checkin {
   checkedInAt    DateTime
   createdAt      DateTime     @default(now())
   updatedAt      DateTime     @updatedAt
+}
+
+enum Class {
+  PLUS_ONE
+  PLUS_TWO
+}
+
+enum Course {
+  SCIENCE
+  COMMERCE
+  HUMANITIES
+  VHSC
 }

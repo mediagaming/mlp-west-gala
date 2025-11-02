@@ -22,13 +22,12 @@ import {
   Download,
   Loader2,
   Loader,
-  Share,
   Share2,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { getRegistration, register } from "@/functions/registeration";
 import { CustomCombobox } from "./ui/combobox";
-import { DIVISIONS, SCHOOLS } from "@/lib/conts";
+import { COURSES, DIVISIONS, SCHOOLS } from "@/lib/conts";
 import Image from "next/image";
 import { createNPId } from "@/lib/utils";
 import { Registration } from "@/lib/generated/prisma/client";
@@ -39,7 +38,8 @@ interface FormData {
   name: string;
   mobile: string;
   dob: string;
-  place: string;
+  class: "PLUS_ONE" | "PLUS_TWO" | string;
+  course: "SCIENCE" | "COMMERCE" | "HUMANITIES" | "VHSC" | string;
   division: string;
   school: string;
 }
@@ -56,7 +56,8 @@ export function RegistrationForm() {
     name: "",
     mobile: "",
     dob: "",
-    place: "",
+    class: "",
+    course: "",
     division: "",
     school: "",
   });
@@ -171,8 +172,18 @@ export function RegistrationForm() {
       newErrors.name = "Full name is required";
     }
 
-    if (!formData.place.trim()) {
-      newErrors.place = "Place is required";
+    if (
+      !formData.class.trim() &&
+      formData.class !== "PLUS_ONE" &&
+      formData.class !== "PLUS_TWO"
+    ) {
+      newErrors.class = "Class is required";
+    }
+    if (
+      !formData.course.trim() &&
+      !["SCIENCE", "COMMERCE", "HUMANITIES", "VHSC"].includes(formData.course)
+    ) {
+      newErrors.course = "Course is required";
     }
 
     if (!formData.division) {
@@ -227,7 +238,15 @@ export function RegistrationForm() {
     setSubmitStatus("idle");
 
     try {
-      const response = await register(formData);
+      const response = await register({
+        ...formData,
+        class: formData.class as "PLUS_ONE" | "PLUS_TWO",
+        course: formData.course as
+          | "SCIENCE"
+          | "COMMERCE"
+          | "HUMANITIES"
+          | "VHSC",
+      });
 
       if (!response) {
         throw new Error("Registration failed");
@@ -315,7 +334,8 @@ export function RegistrationForm() {
       name: "",
       mobile: "",
       dob: "",
-      place: "",
+      class: "",
+      course: "",
       division: "",
       school: "",
     });
@@ -464,20 +484,54 @@ export function RegistrationForm() {
               )}
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="place">Place *</Label>
-              <Input
-                id="place"
-                name="place"
-                value={formData.place}
-                onChange={handleInputChange}
-                placeholder="Enter your place"
-                readOnly={checkStatus === "found"}
-                className={errors.place ? "border-red-500" : ""}
-              />
-              {errors.place && (
-                <p className="text-sm text-red-600">{errors.place}</p>
-              )}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="space-y-2 w-full">
+                <Label htmlFor="course">Course *</Label>
+                <Select
+                  value={formData.course}
+                  onValueChange={(value) => handleSelectChange("course", value)}
+                  disabled={checkStatus === "found"}
+                >
+                  <SelectTrigger
+                    id="course"
+                    className={errors.course ? "border-red-500" : ""}
+                  >
+                    <SelectValue placeholder="Select course" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {COURSES.map((crs) => (
+                      <SelectItem key={crs} value={crs.toUpperCase()}>
+                        {crs}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                {errors.course && (
+                  <p className="text-sm text-red-600">{errors.course}</p>
+                )}
+              </div>
+              <div className="space-y-2 w-full">
+                <Label htmlFor="class">Class *</Label>
+                <Select
+                  value={formData.class}
+                  onValueChange={(value) => handleSelectChange("class", value)}
+                  disabled={checkStatus === "found"}
+                >
+                  <SelectTrigger
+                    id="class"
+                    className={errors.class ? "border-red-500" : ""}
+                  >
+                    <SelectValue placeholder="Select class" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="PLUS_ONE">Plus One</SelectItem>
+                    <SelectItem value="PLUS_TWO">Plus TWO</SelectItem>
+                  </SelectContent>
+                </Select>
+                {errors.class && (
+                  <p className="text-sm text-red-600">{errors.class}</p>
+                )}
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -588,13 +642,13 @@ export function RegistrationForm() {
                 alt="ticket"
                 className="h-full w-full"
               />
-              <div className=" absolute inset-x-0 top-[46.5%] w-full mx-auto">
-                <div className="w-2/5 mx-auto border flex flex-col gap-8">
+              <div className=" absolute inset-x-0 top-[46.5%] w-full mx-auto ">
+                <div className="w-1/2 mx-auto flex flex-col gap-8">
                   <div className="font-poppins font-semibold  flex flex-col leading-tight">
-                    <h4 className="text-primary text-[55px]">
+                    <h4 className="text-white text-[60px]">
                       {createNPId(ticketData?.id || 500)}
                     </h4>
-                    <h2 className="text-[65px]">
+                    <h2 className="text-[70px] text-orange-200">
                       {ticketData?.name || "Ajmal Yaseen"}
                     </h2>
                   </div>

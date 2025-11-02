@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-secondary/80 text-white py-6">
+    <footer className="w-full bg-primary text-white py-6">
       <motion.div 
         className="max-w-5xl mx-auto px-6 flex flex-col items-center justify-between gap-3 text-center md:text-left"
         initial={{ opacity: 0, y: 20 }}
@@ -14,7 +14,7 @@ export default function Footer() {
           Higher Secondary Student&apos;s Gala
         </h2>
         <p className="text-sm md:text-base text-gray-300">
-          SSF Malappuram East District
+          SSF Thrissur District
         </p>
       </motion.div>
     </footer>

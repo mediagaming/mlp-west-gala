@@ -84,7 +84,8 @@ export default class Registeration {
     name: string;
     mobile: string;
     dob: string;
-    place: string;
+    class: "PLUS_ONE" | "PLUS_TWO";
+    course: "SCIENCE" | "COMMERCE" | "HUMANITIES" | "VHSC";
     division: string;
     school: string;
   }) {

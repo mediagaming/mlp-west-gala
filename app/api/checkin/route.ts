@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-    if (!ticketId.startsWith("NP")) {
+    if (!ticketId.startsWith("TCR")) {
       return NextResponse.json(
         { success: false, message: "Invalid ticket ID" },
         { status: 400 }
@@ -44,7 +44,8 @@ export async function POST(request: NextRequest) {
             name: registration.name,
             division: registration.division,
             school: registration.school,
-            place: registration.place,
+            course: registration.course,
+            class: registration.class,
             mobile: registration.mobile,
             dob: registration.dob,
           },
@@ -64,7 +65,8 @@ export async function POST(request: NextRequest) {
         name: attendee?.name,
         division: attendee?.division,
         school: attendee?.school,
-        place: attendee?.place,
+        course: registration.course,
+        class: registration.class,
         mobile: attendee?.mobile,
         dob: attendee?.dob,
       },

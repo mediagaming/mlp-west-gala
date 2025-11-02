@@ -12,12 +12,12 @@ export function createNPId(number: number): string {
   const paddedNumber = absoluteNumber.toString().padStart(3, "0");
 
   // Return with NP prefix
-  return `NP${paddedNumber}`;
+  return `TCR${paddedNumber}`;
 }
 
 export function extractNumberFromNPId(npId: string): number {
   // Remove "NP" prefix and convert to number
-  const numberStr = npId.replace(/^NP/i, ""); // case-insensitive removal
+  const numberStr = npId.replace(/^TCR/i, ""); // case-insensitive removal
 
   // Convert to number and return
   const number = parseInt(numberStr, 10);

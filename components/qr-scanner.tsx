@@ -17,7 +17,8 @@ interface CheckinResult {
     name: string;
     division: string;
     school: string;
-    place: string;
+    class: "PLUS_ONE" | "PLUS_TWO";
+    course: "SCIENCE" | "COMMERCE" | "HUMANITIES" | "VHSC";
     dob: string;
     mobile: string;
   };

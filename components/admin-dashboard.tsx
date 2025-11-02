@@ -33,6 +33,7 @@ import {
   SelectValue,
 } from "./ui/select";
 import { DIVISIONS } from "@/lib/conts";
+import { createNPId } from "@/lib/utils";
 
 interface Attendee extends Registration {
   Checkin: Checkin | null;
@@ -105,8 +106,10 @@ export function AdminDashboard() {
 
   const handleExportCSV = () => {
     const headers = [
+      "Ticket ID",
       "Name",
-      "Place",
+      "Course",
+      "Class",
       "School",
       "Division",
       "Mobile",
@@ -116,8 +119,10 @@ export function AdminDashboard() {
       "Checked In At",
     ];
     const rows = attendees.map((a) => [
+      createNPId(a.id),
       a.name,
-      a.place,
+      a.course,
+      a.class,
       a.school,
       a.division,
       a.mobile,
@@ -364,9 +369,13 @@ export function AdminDashboard() {
                   key={attendee.id}
                   className="border-b border-border hover:bg-muted/50 transition"
                 >
+                  <td className="py-3 px-4">{createNPId(attendee.id)}</td>
                   <td className="py-3 px-4">{attendee.name}</td>
                   <td className="py-3 px-4 text-foreground/70">
-                    {attendee.place}
+                    {attendee.course}
+                  </td>
+                  <td className="py-3 px-4 text-foreground/70">
+                    {attendee.class}
                   </td>
                   <td className="py-3 px-4">{attendee.division}</td>
                   <td className="py-3 px-4">{attendee.school}</td>

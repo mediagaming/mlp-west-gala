@@ -144,7 +144,7 @@ const HeroSection = () => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="relative w-full min-h-dvh flex flex-col items-center justify-center overflow-hidden px-4 bg-gradient-to-br from-secondary/20 via-background to-primary/20 bg-fixed"
+      className="relative w-full min-h-dvh flex flex-col items-center justify-center overflow-hidden px-4 bg-gradient-to-br from-secondary/60 via-background to-primary/60 bg-fixed"
     >
       {/* Background Images */}
       <Image
@@ -173,8 +173,8 @@ const HeroSection = () => {
             <motion.div variants={titleVariants}>
               <h1 className="text-4xl lg:text-5xl font-light  tracking-tight">
                 <span className="block text-gray-800 mb-2">No Cap,</span>
-                <span className="block font-bold text-secondary drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]">
-                  It's Tomorrow 
+                <span className="block font-bold text-primary drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]">
+                  It's Tomorrow
                 </span>
               </h1>
             </motion.div>
@@ -218,20 +218,20 @@ const HeroSection = () => {
               variants={infoVariants}
             >
               <div className="flex items-start gap-2 md:text-lg text-base">
-                <Calendar className="w-6 h-6 text-secondary flex-shrink-0" />
+                <Calendar className="w-6 h-6 text-primary flex-shrink-0" />
                 <div className="flex items-center gap-1 flex-wrap">
                   <span className="font-light">2025</span>
-                  <span className="text-secondary font-semibold">Nov</span>
-                  <span className="text-secondary font-semibold">
-                    23<span className="text-black">,</span>
+                  <span className="text-primary font-semibold">Nov</span>
+                  <span className="text-primary font-semibold">
+                    30<span className="text-black">,</span>
                   </span>
                   <span className="font-light">Sunday</span>
                 </div>
               </div>
 
               <div className="flex items-center gap-2 md:text-lg text-base">
-                <MapPin className="w-6 h-6 text-secondary flex-shrink-0" />
-                <span className="font-semibold text-secondary">Wandoor</span>
+                <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
+                <span className="font-semibold text-primary">Vadakkekad</span>
               </div>
             </motion.div>
 
@@ -256,7 +256,7 @@ const HeroSection = () => {
         </div>
 
         {/* What Awaits You Section */}
-        <motion.div className="mt-8 lg:mt-12 " variants={benefitsVariants}>
+        {/* <motion.div className="mt-8 lg:mt-12 " variants={benefitsVariants}>
           <div className="relative w-fit max-w-2xl mx-auto">
             <Image
               src="/football.png"
@@ -334,7 +334,7 @@ const HeroSection = () => {
               </motion.div>
             </motion.div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.section>
   );

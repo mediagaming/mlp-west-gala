@@ -6,13 +6,13 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Download, Search } from "lucide-react";
 import { Input } from "./ui/input";
+import { createNPId } from "@/lib/utils";
 
 interface Attendee extends Registration {
   Checkin: Checkin | null;
 }
 
-function DivisionDashboard({ attendees }: { attendees: Attendee[] }) {
-  const params = useParams();
+function DivisionDashboard({ attendees,division }: { attendees: Attendee[],division:string }) {
   const [filteredAttendees, setFilteredAttendees] = useState<Attendee[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -26,8 +26,10 @@ function DivisionDashboard({ attendees }: { attendees: Attendee[] }) {
   }, [searchTerm, attendees]);
   const handleExportCSV = () => {
     const headers = [
+      "Ticket ID",
       "Name",
-      "Place",
+      "Course",
+      "Class",
       "School",
       "Division",
       "Mobile",
@@ -37,8 +39,10 @@ function DivisionDashboard({ attendees }: { attendees: Attendee[] }) {
       "Checked In At",
     ];
     const rows = attendees.map((a) => [
+      createNPId(a.id),
       a.name,
-      a.place,
+      a.course,
+      a.class,
       a.school,
       a.division,
       a.mobile,
@@ -63,14 +67,16 @@ function DivisionDashboard({ attendees }: { attendees: Attendee[] }) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">{params.division} Division</h1>
+        <h1 className="text-4xl font-bold mb-2">{division} Division</h1>
         <p className="text-foreground/70">
           Event analytics and attendee management
         </p>
       </div>
       <Card className="p-6">
         <div className="flex items-center justify-between mb-6 flex-wrap">
-          <h3 className="text-lg font-bold w-max  flex-1">Attendee List ({filteredAttendees.length})</h3>
+          <h3 className="text-lg font-bold w-max  flex-1">
+            Attendee List ({filteredAttendees.length})
+          </h3>
           <div className="flex gap-2 flex-wrap">
             <Button
               onClick={handleExportCSV}
@@ -98,8 +104,10 @@ function DivisionDashboard({ attendees }: { attendees: Attendee[] }) {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border">
+                <th className="text-left py-3 px-4 font-semibold">Ticket ID</th>
                 <th className="text-left py-3 px-4 font-semibold">Name</th>
-                <th className="text-left py-3 px-4 font-semibold">Place</th>
+                <th className="text-left py-3 px-4 font-semibold">Course</th>
+                <th className="text-left py-3 px-4 font-semibold">Class</th>
                 <th className="text-left py-3 px-4 font-semibold">Division</th>
                 <th className="text-left py-3 px-4 font-semibold">School</th>
                 <th className="text-left py-3 px-4 font-semibold">Mobile</th>
@@ -113,9 +121,13 @@ function DivisionDashboard({ attendees }: { attendees: Attendee[] }) {
                   key={attendee.id}
                   className="border-b border-border hover:bg-muted/50 transition"
                 >
+                  <td className="py-3 px-4">{createNPId(attendee.id)}</td>
                   <td className="py-3 px-4">{attendee.name}</td>
                   <td className="py-3 px-4 text-foreground/70">
-                    {attendee.place}
+                    {attendee.course}
+                  </td>
+                  <td className="py-3 px-4 text-foreground/70">
+                    {attendee.class}
                   </td>
                   <td className="py-3 px-4">{attendee.division}</td>
                   <td className="py-3 px-4">{attendee.school}</td>
