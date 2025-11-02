@@ -354,8 +354,10 @@ export function AdminDashboard() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border">
+                <th className="text-left py-3 px-4 font-semibold">Ticket ID</th>
                 <th className="text-left py-3 px-4 font-semibold">Name</th>
-                <th className="text-left py-3 px-4 font-semibold">Place</th>
+                <th className="text-left py-3 px-4 font-semibold">Course</th>
+                <th className="text-left py-3 px-4 font-semibold">Class</th>
                 <th className="text-left py-3 px-4 font-semibold">Division</th>
                 <th className="text-left py-3 px-4 font-semibold">School</th>
                 <th className="text-left py-3 px-4 font-semibold">Mobile</th>
