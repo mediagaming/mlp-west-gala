@@ -272,10 +272,10 @@ const HeroSection = () => {
           </motion.div>
         </div>
         <motion.div
-          className="max-w-4xl mx-auto flex flex-col gap-6"
+          className="max-w-4xl mx-auto flex flex-col gap-6 md:gap-8"
           variants={benefitsVariants}
         >
-          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
             {[
               "NextGen Talks",
               "Gala League",
@@ -284,16 +284,16 @@ const HeroSection = () => {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="flex items-center justify-center gap-2 py-2 px-3 rounded-sm bg-zinc-200/60 border border-zinc-200  backdrop-blur-xs shadow-2xl"
+                className="flex items-center justify-center gap-2 py-2 px-3 rounded-sm bg-gradient-to-r from-zinc-400/40 to-zinc-500/40 border border-zinc-200  backdrop-blur-xs shadow-2xl "
                 variants={itemVariants}
               >
-                <span className="text-lg font-semibold ">{item}</span>
+                <span className="text-base md:text-lg font-semibold ">{item}</span>
               </motion.div>
             ))}
           </motion.div>
-          <motion.div className="w-max mt-2 mx-auto" variants={buttonVariants}>
+          <motion.div className="w-full max-w-md  mx-auto mt-2" variants={buttonVariants}>
             <motion.button
-              className="py-4 px-8 w-max bg-primary text-white font-bold text-xl lg:text-2xl rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="py-4 px-8 w-full bg-primary text-white font-bold text-xl lg:text-2xl rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               onClick={() => {
                 window.scrollTo({
                   top: document.getElementById("register")?.offsetTop,

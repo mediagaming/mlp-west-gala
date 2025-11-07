@@ -659,7 +659,7 @@ export function RegistrationForm() {
               </div>
             </div>
           </div>{" "}
-          <div className="text-center mt-6 flex gap-2 justify-center items-center">
+          <div className="text-center mt-6 flex gap-2 justify-center items-center flex-wrap">
             <Button
               onClick={downloadTicket}
               className="bg-primary hover:bg-primary/90"
